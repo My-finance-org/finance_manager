@@ -16,13 +16,13 @@
 1. Клонируйте репозиторий:
 
 ```
-git clone https://github.com/your-username/financial-manager.git
+git clone https://github.com/My-finance-org/finance_manager.git
 ```
 
 2. Перейдите в директорию проекта:
 
 ```
-cd financial-manager
+cd finance_manager
 ```
 
 3. Установите зависимости:
