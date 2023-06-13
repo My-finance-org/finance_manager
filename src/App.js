@@ -1,6 +1,8 @@
 import './App.css';
 
 function App() {
+
+  console.log('work');
   return (
     <div className="App">
       <header className="App-header">
