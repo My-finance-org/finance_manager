@@ -1,21 +1,15 @@
-import './App.css';
+import { Button } from '@mui/material';
+import style from './App.module.scss';
 
 function App() {
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className={style.App}>
+      <header className={style['App-header']}>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          FINANCE MANAGER 
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Button variant='contained'>TEST</Button>
       </header>
     </div>
   );
