@@ -1,4 +1,4 @@
-// FinanceService.js
+import api from "../axios/axiosWrapper";
 
 class FinanceService {
   // Метод для получения списка транзакций

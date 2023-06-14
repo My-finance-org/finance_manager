@@ -1,3 +1,5 @@
+import api from "../axios/axiosWrapper";
+
 class AuthService {
   async login(email, password) {
     try {
