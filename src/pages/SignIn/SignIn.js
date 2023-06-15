@@ -1,7 +1,8 @@
 import React from 'react'
+import AuthLayout from '../../layouts/AuthLayout'
 
 export const SignIn = () => {
   return (
-    <div>SignIn</div>
+    <AuthLayout>SignIn</AuthLayout>
   )
 }
