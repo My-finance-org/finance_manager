@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
 import styles from './LoginButton.module.scss';
 
-const LoginButton = ({ text, onClick, disabled }) => {
+const LoginButton = ({ text, onClick }) => {
   return (
     <Button className={styles.primaryButton} variant="contained" onClick={onClick}>
       {text}
@@ -14,7 +14,6 @@ const LoginButton = ({ text, onClick, disabled }) => {
 Button.propTypes = {
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  disabled: PropTypes.bool,
 };
 
 export default LoginButton;

@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import GoogleIcon from '../../../assets/Icons/GoogleIcon.svg'
 import styles from './GoogleSigiInButton.module.scss'
 
-const GoogleSiginInButton = ({ text, onClick, disabled }) => {
+const GoogleSiginInButton = ({ text, onClick }) => {
   return (
     <Button className={styles.GoogleSiginInButton} variant="contained" onClick={onClick} startIcon={<SVG 
     src={GoogleIcon}
@@ -21,7 +21,6 @@ const GoogleSiginInButton = ({ text, onClick, disabled }) => {
 Button.propTypes = {
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  disabled: PropTypes.bool,
 };
 
 export default GoogleSiginInButton;

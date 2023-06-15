@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import RightArrow from '../../../assets/Icons/RightArrow.svg'
 import styles from './DetailsButton.module.scss';
 
-const DetailsButton = ({ text, onClick, disabled }) => {
+const DetailsButton = ({ text, onClick }) => {
   return (
     <Button className={styles.DetailsButton} variant="contained" onClick={onClick} endIcon={<SVG 
       src={RightArrow}
@@ -21,7 +21,6 @@ const DetailsButton = ({ text, onClick, disabled }) => {
 Button.propTypes = {
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  disabled: PropTypes.bool,
 };
 
 export default DetailsButton;
