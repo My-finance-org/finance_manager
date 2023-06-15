@@ -1,7 +1,15 @@
-import { Button } from '@mui/material';
 import style from './App.module.scss';
+import AddAccountsButton from './components/Buttons/AddAccountsButton';
+import CheckButton from './components/Buttons/CheckButton';
+import DetailsButton from './components/Buttons/DetailsButton';
+import GoogleSiginInButton from './components/Buttons/GoogleSigiInButton';
+import LoginButton from './components/Buttons/LoginButton';
 
 function App() {
+
+  const handler = () => {
+    console.log('work')
+  }
 
   return (
     <div className={style.App}>
@@ -9,7 +17,11 @@ function App() {
         <p>
           FINANCE MANAGER 
         </p>
-        <Button variant='contained'>TEST</Button>
+        <LoginButton text="Login" onClick={handler}/>
+        <GoogleSiginInButton text="Continue with Google" onClick={handler}/>
+        <DetailsButton text="Details" onClick={handler}/>
+        <AddAccountsButton text="Add accounts" onClick={handler}/>
+        <CheckButton text="Check" onClick={handler}/>
       </header>
     </div>
   );

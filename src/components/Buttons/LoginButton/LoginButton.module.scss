@@ -1,0 +1,15 @@
+.primaryButton {
+    background-color: #299D91 !important;
+    color: #fff !important;
+    padding: 12px 0px !important;
+    border-radius: 4px !important;
+    max-width: 400px;
+    width: 100%;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+
+    &:active {
+        background-color: #E4E7EB !important;
+        color: #4B5768 !important;
+    }
+}
