@@ -1,9 +1,9 @@
-import style from './App.module.scss';
 import AddAccountsButton from './components/Buttons/AddAccountsButton';
 import CheckButton from './components/Buttons/CheckButton';
 import DetailsButton from './components/Buttons/DetailsButton';
 import GoogleSiginInButton from './components/Buttons/GoogleSigiInButton';
 import LoginButton from './components/Buttons/LoginButton';
+import style from './App.module.scss';
 
 function App() {
 
