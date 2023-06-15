@@ -14,19 +14,14 @@ import style from './App.module.scss';
 
 
 function App() {
-
-  const handler = () => {
-    console.log('work')
-  }
-
   return (
     <div className={style.App}>
       <header className={style['App-header']}>
         <BrowserRouter>
           <Routes>
-            <Route path="/login" element={<PublicRoute restricted={true} element={<SignIn/>} />} />
-            <Route path="/signup" element={<PublicRoute restricted={true} element={<SignUp />} />} />
             <Route path="/" element={<PrivateRoute element={<Home />} />} />
+            <Route path="/login" element={<PublicRoute restricted={false} element={<SignIn/>} />} />
+            <Route path="/signup" element={<PublicRoute restricted={false} element={<SignUp />} />} />
             <Route path="/balances" element={<PrivateRoute element={<Balances />} />} />
             <Route path="/balances/:id" element={<PrivateRoute element={<Balance />} />} />
             <Route path="/transactions" element={<PrivateRoute element={<Transactions />} />} />

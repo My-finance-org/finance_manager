@@ -1,7 +1,7 @@
 import { useRoutes, useNavigate, Navigate } from 'react-router-dom';
 
 export const PrivateRoute = ({ path, element}) => {
-  const isAuthenticated = true;
+  const isAuthenticated = false;
   const navigate = useNavigate();
 
   if (!isAuthenticated) {
@@ -12,7 +12,7 @@ export const PrivateRoute = ({ path, element}) => {
 };
 
 export const PublicRoute = ({ path, restricted, element }) => {
-  const isAuthenticated = true;
+  const isAuthenticated = false;
   const navigate = useNavigate();
 
   if (isAuthenticated && restricted) {
