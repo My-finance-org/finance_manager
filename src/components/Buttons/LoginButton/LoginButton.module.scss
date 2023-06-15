@@ -8,8 +8,12 @@
     font-size: 16px !important;
     font-weight: 600 !important;
 
-    &:active {
-        background-color: #E4E7EB !important;
-        color: #4B5768 !important;
+    &:hover {
+        transition: transform 0.3s ease;
+        transform: scale(1.03);
+    }
+    &:not(:hover) {
+        transition: transform 0.3s ease;
+        transform: scale(1);
     }
 }
