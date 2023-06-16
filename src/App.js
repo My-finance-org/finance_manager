@@ -16,7 +16,6 @@ import style from './App.module.scss';
 function App() {
   return (
     <div className={style.App}>
-      <header className={style['App-header']}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<PrivateRoute element={<Home />} />} />
@@ -32,7 +31,6 @@ function App() {
             <Route path="*" element={<p>NotFound</p>} />
           </Routes>
         </BrowserRouter>
-      </header>
     </div>
   );
 }
