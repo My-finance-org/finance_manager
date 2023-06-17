@@ -19,7 +19,7 @@ const SearchInput = ({ placeHolder, vlaue, onChange }) => {
 
 SearchInput.propTypes = {
   placeHolder: PropTypes.string.isRequired,
-  value: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 

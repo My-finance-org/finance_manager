@@ -12,7 +12,7 @@ const PopUpButton = ({ text, onClick }) => {
 
 PopUpButton.propTypes = {
   text: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.string.isRequired,
 };
 
 export default PopUpButton;

@@ -15,7 +15,7 @@ const PopUpInput = ({ title, placeHolder, value, onChange }) => {
 PopUpInput.propTypes = {
   title: PropTypes.string.isRequired,
   placeHolder: PropTypes.string.isRequired,
-  value: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 

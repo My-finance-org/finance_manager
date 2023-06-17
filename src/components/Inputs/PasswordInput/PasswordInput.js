@@ -43,7 +43,7 @@ const PasswordInput = ({ placeHolder, value, onChange }) => {
 
 PasswordInput.propTypes = {
   placeHolder: PropTypes.string.isRequired,
-  value: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
