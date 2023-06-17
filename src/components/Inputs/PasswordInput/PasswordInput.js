@@ -7,7 +7,7 @@ import HidePasswordIcon from '../../../assets/Icons/HidePassword.svg'
 import styles from './PasswordInput.module.scss'
 
 
-const PasswordInput = ({ placeHolder, vlaue, onChange }) => {
+const PasswordInput = ({ placeHolder, value, onChange }) => {
   const [inputType, setInputType] = useState('password')
   const [passwordIcon, setPasswordIcon] = useState(ShowPasswordIcon)
   const [activeIconClass, setActiveIconClass] = useState(false)
@@ -31,7 +31,7 @@ const PasswordInput = ({ placeHolder, vlaue, onChange }) => {
     onFocus={() => setActiveIconClass(!activeIconClass)}
     onBlur={() => setActiveIconClass(!activeIconClass)}
     >
-      <input type={inputType} className={styles.PasswordInput } placeholder={placeHolder}/>
+      <input type={inputType} className={styles.PasswordInput } placeholder={placeHolder} onChange={onChange} value={value}/>
       <SVG
         src={passwordIcon}
         className={iconClasses}

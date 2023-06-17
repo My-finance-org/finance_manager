@@ -4,9 +4,11 @@ import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/bootstrap.css'
 import styles from './PhoneNumberInput.module.scss'
 
-const PhoneNumberInput = ({ vlaue, onChange }) => {
+const PhoneNumberInput = ({ value, onChange }) => {
   return (
     <PhoneInput
+    onChange={onChange}
+    value={value}
         inputProps={{
           name: 'phone',
           required: true,
