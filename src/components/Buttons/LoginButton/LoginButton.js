@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '@mui/material/Button';
 import styles from './LoginButton.module.scss';
 
 const LoginButton = ({ text, onClick }) => {
   return (
-    <Button className={styles.primaryButton} variant="contained" onClick={onClick}>
+    <button className={styles.primaryButton} onClick={onClick}>
       {text}
-    </Button>
+    </button>
   );
 };
 
-Button.propTypes = {
+LoginButton.propTypes = {
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };

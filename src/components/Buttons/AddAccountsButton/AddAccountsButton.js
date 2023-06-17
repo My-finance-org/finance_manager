@@ -1,17 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '@mui/material/Button';
 import styles from './AddAccountsButton.module.scss';
 
 const AddAccountsButton = ({ text, onClick }) => {
   return (
-    <Button className={styles.AddAccountsButton} variant="contained" onClick={onClick}>
-      {text}
-    </Button>
+    <button className={styles.AddAccountsButton} onClick={onClick}>{text}</button>
   );
 };
 
-Button.propTypes = {
+AddAccountsButton.propTypes = {
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };

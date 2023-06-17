@@ -1,12 +1,13 @@
 .primaryButton {
-    background-color: #299D91 !important;
-    color: #fff !important;
-    padding: 12px 0px !important;
-    border-radius: 4px !important;
+    background-color: #299D91;
+    color: #fff;
+    padding: 12px 0px;
+    border-radius: 4px;
     max-width: 400px;
     width: 100%;
-    font-size: 16px !important;
-    font-weight: 600 !important;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
 
     &:hover {
         transition: transform 0.3s ease;

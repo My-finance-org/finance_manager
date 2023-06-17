@@ -1,10 +1,11 @@
-.primaryButton {
-    background-color: #299D91 !important;
-    color: #fff !important;
-    padding: 12px 36px !important;
-    border-radius: 4px !important;
-    font-size: 16px !important;
-    font-weight: 400 !important;
+.CheckButton {
+    background-color: #299D91;
+    color: #fff;
+    padding: 12px 36px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
     &:hover {
         transition: transform 0.3s ease;
         transform: scale(1.03);
