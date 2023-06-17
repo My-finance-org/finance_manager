@@ -11,7 +11,6 @@ import Settings from "./pages/Settings";
 import Transactions from "./pages/Transactions";
 import Balance from './pages/Balance';
 import style from './App.module.scss';
-import CheckBox from './components/Inputs/CheckBox';
 
 function App() {
   return (
@@ -31,7 +30,6 @@ function App() {
             <Route path="*" element={<p>NotFound</p>} />
           </Routes>
         </BrowserRouter>
-        <CheckBox/>
     </div>
   );
 }
