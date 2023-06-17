@@ -1,7 +1,8 @@
 import React from 'react'
+import { MainLayout } from '../../layouts/MainLayout/MainLayout'
 
 export const Goals = () => {
   return (
-    <div>Goals</div>
+    <MainLayout>Goals</MainLayout>
   )
 }

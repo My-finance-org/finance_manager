@@ -18,7 +18,6 @@ import PasswordInput from './components/Inputs/PasswordInput/PasswordInput';
 function App() {
   return (
     <div className={style.App}>
-      <header className={style['App-header']}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<PrivateRoute element={<Home />} />} />

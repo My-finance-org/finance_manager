@@ -1,7 +1,8 @@
 import React from 'react'
+import { MainLayout } from '../../layouts/MainLayout/MainLayout'
 
 export const Expenses = () => {
   return (
-    <div>Expenses</div>
+    <MainLayout>Expenses</MainLayout>
   )
 }

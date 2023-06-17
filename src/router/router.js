@@ -1,7 +1,7 @@
 import { useRoutes, useNavigate, Navigate } from 'react-router-dom';
 
 export const PrivateRoute = ({ path, element}) => {
-  const isAuthenticated = false;
+  const isAuthenticated = true;
   const navigate = useNavigate();
 
   if (!isAuthenticated) {
