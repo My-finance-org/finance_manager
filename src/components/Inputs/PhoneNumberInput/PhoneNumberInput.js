@@ -23,7 +23,7 @@ const PhoneNumberInput = ({ value, onChange }) => {
 };
 
 PhoneNumberInput.propTypes = {
-  value: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
