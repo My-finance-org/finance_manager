@@ -12,7 +12,6 @@ import Transactions from "./pages/Transactions";
 import Balance from './pages/Balance';
 import style from './App.module.scss';
 
-
 function App() {
   return (
     <div className={style.App}>
