@@ -1,5 +1,4 @@
 import React from 'react'
-import { Box } from '@mui/system'
 import SideBar from '../../components/SideBar'
 import styles from './MainLayout.module.scss'
 

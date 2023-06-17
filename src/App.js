@@ -11,8 +11,6 @@ import Settings from "./pages/Settings";
 import Transactions from "./pages/Transactions";
 import Balance from './pages/Balance';
 import style from './App.module.scss';
-import EmailInput from './components/Inputs/EmailInput/EmailInput';
-import PasswordInput from './components/Inputs/PasswordInput/PasswordInput';
 
 
 function App() {
@@ -33,10 +31,6 @@ function App() {
             <Route path="*" element={<p>NotFound</p>} />
           </Routes>
         </BrowserRouter>
-      </header>
-      {/* <EmailInput placeHolder={'hello@example.com'}/> */}
-      <PasswordInput placeHolder={'Enetr you password'}/>
-      
     </div>
   );
 }

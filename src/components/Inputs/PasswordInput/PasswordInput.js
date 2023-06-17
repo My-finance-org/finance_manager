@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import SVG from 'react-inlinesvg'
 import ShowPasswordIcon from '../../../assets/Icons/ShowPassword.svg'
 import HidePasswordIcon from '../../../assets/Icons/HidePassword.svg'
@@ -7,10 +8,13 @@ import styles from './PasswordInput.module.scss'
 
 
 const PasswordInput = ({ placeHolder, vlaue, onChange }) => {
-
   const [inputType, setInputType] = useState('password')
   const [passwordIcon, setPasswordIcon] = useState(ShowPasswordIcon)
-  const [passwordIconClass, setpasswordIconClass] = useState(styles.passwordIcon)
+  const [activeIconClass, setActiveIconClass] = useState(false)
+
+  const iconClasses = classNames(styles.passwordIcon, {
+    [styles.passwordIconActive]: activeIconClass
+  })
 
   const toggleType = () => {
     if (inputType === 'password') {
@@ -23,11 +27,14 @@ const PasswordInput = ({ placeHolder, vlaue, onChange }) => {
   }
 
   return (
-    <div className={styles.PasswordContainer}>
-      <input type={inputType} className={styles.PasswordInput } placeholder={placeHolder} />
+    <div className={styles.PasswordContainer} 
+    onFocus={() => setActiveIconClass(!activeIconClass)}
+    onBlur={() => setActiveIconClass(!activeIconClass)}
+    >
+      <input type={inputType} className={styles.PasswordInput } placeholder={placeHolder}/>
       <SVG
         src={passwordIcon}
-        className={styles.passwordIcon}
+        className={iconClasses}
         onClick={toggleType}
       />
     </div>
