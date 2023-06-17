@@ -1,0 +1,23 @@
+.EmailInput{
+    background-color: transparent;
+    border: 1px solid #4B5768;
+    max-width: 400px;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    outline-color: #D0D5DD;
+    outline: none;
+    color: #D0D5DD;
+    transition: .2s;
+    &:focus{
+        transition: .2s;
+        border-color: #D0D5DD;
+    }
+    &::placeholder {
+        color: #4B5768;
+        font-size: 16px;
+    }
+    &:focus::placeholder{
+        color: transparent;
+    }
+}
