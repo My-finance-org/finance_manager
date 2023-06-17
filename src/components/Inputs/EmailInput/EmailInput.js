@@ -1,11 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './EmaiInput.module.scss'
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./EmaiInput.module.scss";
 
 const EmailInput = ({ placeHolder, value, onChange }) => {
-
   return (
-    <input type="email" className={styles.EmailInput} placeholder={placeHolder} onChange={onChange} value={value}/>
+    <input
+      type="email"
+      className={styles.EmailInput}
+      placeholder={placeHolder}
+      value={value}
+      onChange={onChange}
+    />
   );
 };
 
