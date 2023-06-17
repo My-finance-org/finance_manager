@@ -1,11 +1,15 @@
 .inputContaier {
     max-width: 400px;
     user-select: none;
+
     .input {
         width: 100%;
         background-color: transparent;
         border: 1px solid #4B5768;
-        padding: 12px 60px;
+        padding: 11px 60px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 400;
         color: #D0D5DD;
         outline: none;
 
@@ -47,6 +51,9 @@
             background-color: #1E1E1E;    /* цвет бегунка */
             border-radius: 8px;       /* округлось бегунка */
             border: 1.5px solid #299D91;  /* отступ вокруг бегунка */
+          }
+          li {
+            background-color: transparent !important;
           }
     }
 }

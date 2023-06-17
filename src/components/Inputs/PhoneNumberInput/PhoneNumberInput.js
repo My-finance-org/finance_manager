@@ -1,7 +1,6 @@
 import React, { useState, useEffect, } from 'react';
 import PropTypes from 'prop-types';
 import PhoneInput from 'react-phone-input-2'
-// import 'react-phone-input-2/lib/style.css'
 import 'react-phone-input-2/lib/bootstrap.css'
 import styles from './PhoneNumberInput.module.scss'
 
