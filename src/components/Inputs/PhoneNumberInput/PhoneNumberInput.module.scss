@@ -1,0 +1,59 @@
+.inputContaier {
+    max-width: 400px;
+    user-select: none;
+
+    .input {
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid #4B5768;
+        padding: 11px 60px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #D0D5DD;
+        outline: none;
+
+        &:focus {
+            transition: .2s;
+            border-color: #D0D5DD;
+            color: #D0D5DD;
+            background-color: transparent;
+            outline: none;
+            box-shadow: none;
+        }
+
+        &::placeholder {
+            color: #4B5768;
+            font-size: 16px;
+        }
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+    }
+
+    .dropDownButton {
+        background-color: transparent;
+    }
+
+    .dropdown {
+        background-color: transparent;
+        color: #D0D5DD;
+        border-radius: 8px;
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #299D91;
+            border-radius: 8px;
+          }
+        &::-webkit-scrollbar-thumb {
+            background-color: #1E1E1E;    /* цвет бегунка */
+            border-radius: 8px;       /* округлось бегунка */
+            border: 1.5px solid #299D91;  /* отступ вокруг бегунка */
+          }
+          li {
+            background-color: transparent !important;
+          }
+    }
+}
