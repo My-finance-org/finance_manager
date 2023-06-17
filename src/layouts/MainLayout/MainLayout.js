@@ -1,7 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 import SideBar from "../../components/SideBar";
 import styles from "./MainLayout.module.scss";
-import PropTypes from "prop-types";
 
 export const MainLayout = ({ children }) => {
   return (

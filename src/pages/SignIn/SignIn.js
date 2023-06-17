@@ -1,12 +1,12 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import AuthLayout from "../../layouts/AuthLayout";
 import Title from "../../components/shared/Title";
-import styles from "./SignIn.module.scss";
 import EmailInput from "../../components/Inputs/EmailInput";
 import PasswordInput from "../../components/Inputs/PasswordInput";
-import { Link } from "react-router-dom";
 import LoginButton from "../../components/Buttons/LoginButton";
 import GoogleSiginInButton from "../../components/Buttons/GoogleSigiInButton";
+import styles from "./SignIn.module.scss";
 
 export const SignIn = () => {
   const [singIn, setSingIn] = useState({
