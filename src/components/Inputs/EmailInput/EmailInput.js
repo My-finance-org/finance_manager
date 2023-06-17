@@ -8,8 +8,6 @@ const EmailInput = ({ placeHolder, value, onChange }) => {
       type="email"
       className={styles.EmailInput}
       placeholder={placeHolder}
-      value={value}
-      onChange={onChange}
     />
   );
 };

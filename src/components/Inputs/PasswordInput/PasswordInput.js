@@ -35,8 +35,6 @@ const PasswordInput = ({ placeHolder, value, onChange }) => {
         type={inputType}
         className={styles.PasswordInput}
         placeholder={placeHolder}
-        value={value}
-        onChange={onChange}
       />
       <SVG
         src={passwordIcon}
