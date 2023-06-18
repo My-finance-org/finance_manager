@@ -7,9 +7,10 @@ const NotificationContextProvider = ({ children }) => {
 
   const addNotification = message => {
     const newNotification = {
-      id: Date.now(),
+      id: Date.now().toLocaleString(),
       message: message,
     };
+
     setNotifications(prevNotifications => [
       ...prevNotifications,
       newNotification,
