@@ -10,7 +10,8 @@ import Expenses from "./pages/Expenses";
 import Settings from "./pages/Settings";
 import Transactions from "./pages/Transactions";
 import Balance from "./pages/Balance";
-import { RoutesEnum } from "./constants/allRoutes";
+import Notification from "./components/Notification";
+import { RoutesEnum } from "./constants/emun/routes";
 import style from "./styles/App.module.scss";
 
 function App() {
@@ -64,6 +65,7 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
+      <Notification />
     </div>
   );
 }
