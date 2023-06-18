@@ -1,16 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import RightArrow from '../../../assets/Icons/RightArrow.svg'
-import SVG from 'react-inlinesvg'
-import styles from './DetailsButton.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import RightArrow from "../../../assets/Icons/RightArrow.svg";
+import SVG from "react-inlinesvg";
+import styles from "./DetailsButton.module.scss";
 
 const DetailsButton = ({ text, onClick }) => {
   return (
-    <button className={styles.DetailsButton} onClick={onClick}>
+    <button
+      className={styles.DetailsButton}
+      onClick={onClick}
+    >
       {text}
-      <SVG
-      src={RightArrow}
-      />
+      <SVG src={RightArrow} />
     </button>
   );
 };

@@ -1,12 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './CheckBox.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./CheckBox.module.scss";
 
 const CheckBox = ({ checked }) => {
   return (
     <>
-      <input id='checkbox' type="checkbox" className={styles.checkBox} checked={checked}/>
-      <label htmlFor="checkbox" className={styles.label}></label>
+      <input
+        id="checkbox"
+        type="checkbox"
+        className={styles.checkBox}
+        checked={checked}
+      />
+      <label
+        htmlFor="checkbox"
+        className={styles.label}
+      ></label>
     </>
   );
 };

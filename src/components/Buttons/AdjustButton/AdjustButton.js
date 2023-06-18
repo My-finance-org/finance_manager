@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import SVG from 'react-inlinesvg'
-import EditIcon from '../../../assets/Icons/EditIcon.svg'
-import styles from './AdjustButton.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import SVG from "react-inlinesvg";
+import EditIcon from "../../../assets/Icons/EditIcon.svg";
+import styles from "./AdjustButton.module.scss";
 
 const AdjustButton = ({ text, onClick }) => {
   return (
-    <button className={styles.adjustButton} onClick={onClick}>
+    <button
+      className={styles.adjustButton}
+      onClick={onClick}
+    >
       {text}
       <SVG
-      src={EditIcon}
-      className={styles.buttonIcon}
+        src={EditIcon}
+        className={styles.buttonIcon}
       />
     </button>
   );

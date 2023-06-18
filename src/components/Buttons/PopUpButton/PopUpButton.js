@@ -1,10 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './PopUpButton.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./PopUpButton.module.scss";
 
 const PopUpButton = ({ text, onClick }) => {
   return (
-    <button className={styles.popUpButton} onClick={onClick}>
+    <button
+      className={styles.popUpButton}
+      onClick={onClick}
+    >
       {text}
     </button>
   );

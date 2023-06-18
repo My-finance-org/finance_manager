@@ -1,10 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './LoginButton.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./LoginButton.module.scss";
 
 const LoginButton = ({ text, onClick }) => {
   return (
-    <button className={styles.primaryButton} onClick={onClick}>
+    <button
+      className={styles.primaryButton}
+      onClick={onClick}
+    >
       {text}
     </button>
   );
