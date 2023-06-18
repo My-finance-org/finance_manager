@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import UIkit from "uikit";
-import { NotificationContext } from "../../contexts/NotificationContext/NotificationContext";
+import { NotificationContext } from "@/contexts/NotificationContext/NotificationContext";
 import "./Notification.module.scss";
 
 const Notification = () => {
