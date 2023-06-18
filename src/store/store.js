@@ -1,3 +1,4 @@
+import { configureStore } from "@reduxjs/toolkit";
 import authSlice from "./AuthSlice";
 import balancesSlice from "./BalancesSlice";
 import financeSlice from "./FinanceSlice";
