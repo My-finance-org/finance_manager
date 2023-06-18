@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import RightArrow from "../../../assets/Icons/RightArrow.svg";
+import RightArrow from "@/assets/Icons/RightArrow.svg";
 import SVG from "react-inlinesvg";
 import styles from "./DetailsButton.module.scss";
 

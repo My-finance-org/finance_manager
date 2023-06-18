@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import GoogleIcon from "../../../assets/Icons/GoogleIcon.svg";
+import GoogleIcon from "@/assets/Icons/GoogleIcon.svg";
 import SVG from "react-inlinesvg";
 import styles from "./GoogleSigiInButton.module.scss";
 

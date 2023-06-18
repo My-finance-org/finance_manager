@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SVG from "react-inlinesvg";
-import EditIcon from "../../../assets/Icons/EditIcon.svg";
+import EditIcon from "@/assets/Icons/EditIcon.svg";
 import styles from "./AdjustButton.module.scss";
 
 const AdjustButton = ({ text, onClick }) => {

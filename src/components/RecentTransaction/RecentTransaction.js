@@ -1,9 +1,9 @@
 import React from "react";
-import BaseTitle from "../shared/BaseTitle";
-import LinkWithIcon from "../LinkWithIcon";
-import RightArrowGray from "../../assets/Icons/RightArrowGray.svg";
-import TabContent from "./components/TabContent";
-import TabHeader from "./components/TabHeader";
+import BaseTitle from "@/components/shared/BaseTitle";
+import LinkWithIcon from "@/components/LinkWithIcon";
+import RightArrowGray from "@/assets/Icons/RightArrowGray.svg";
+import TabContent from "@/components/RecentTransaction/components/TabContent";
+import TabHeader from "@/components/RecentTransaction/components/TabHeader";
 import "./RecentTransaction.scss";
 
 // TODO delete and add data from storage

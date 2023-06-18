@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import SVG from "react-inlinesvg";
-import ShowPasswordIcon from "../../../assets/Icons/ShowPassword.svg";
-import HidePasswordIcon from "../../../assets/Icons/HidePassword.svg";
+import ShowPasswordIcon from "@/assets/Icons/ShowPassword.svg";
+import HidePasswordIcon from "@/assets/Icons/HidePassword.svg";
 import styles from "./PasswordInput.module.scss";
 
 const PasswordInput = ({ placeHolder, value, onChange }) => {

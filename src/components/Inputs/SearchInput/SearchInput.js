@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SVG from "react-inlinesvg";
-import SearchIcon from "../../../assets/Icons/SearchIcon.svg";
+import SearchIcon from "@/assets/Icons/SearchIcon.svg";
 import styles from "./SearchInput.module.scss";
 
 const SearchInput = ({ placeHolder, vlaue, onChange }) => {
