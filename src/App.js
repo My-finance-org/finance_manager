@@ -11,7 +11,7 @@ import Settings from "./pages/Settings";
 import Transactions from "./pages/Transactions";
 import Balance from "./pages/Balance";
 import { RoutesEnum } from "./constants/allRoutes";
-import style from "./App.module.scss";
+import style from "./styles/App.module.scss";
 
 function App() {
   return (

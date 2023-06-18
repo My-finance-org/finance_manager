@@ -1,9 +1,9 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "text": "body"
-    }
-  ],
-  "users": {}
+  "user": {},
+  "users": {},
+  "banalces": {},
+  "goals": {},
+  "settings": {},
+  "transactions": {},
+  "finance": {}
 }
