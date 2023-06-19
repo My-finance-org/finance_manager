@@ -1,3 +1,3 @@
-import Notification from "./Notification";
+import NotificationAlert from "./NotificationAlert";
 
-export default Notification;
+export default NotificationAlert;
