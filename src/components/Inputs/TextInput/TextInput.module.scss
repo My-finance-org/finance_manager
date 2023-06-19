@@ -12,6 +12,8 @@
   &:focus {
     transition: 0.2s;
     border-color: #4b5768;
+    outline-color: #D0D5DD;
+    outline-style: none;
   }
   &::placeholder {
     color: #4b5768;

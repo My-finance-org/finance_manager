@@ -7,6 +7,7 @@ import PasswordInput from "../../components/Inputs/PasswordInput";
 import LoginButton from "../../components/Buttons/LoginButton";
 import GoogleSiginInButton from "../../components/Buttons/GoogleSigiInButton";
 import styles from "./SignIn.module.scss";
+import CheckBox from "@/components/Inputs/CheckBox";
 
 export const SignIn = () => {
   const [singIn, setSingIn] = useState({
@@ -50,12 +51,7 @@ export const SignIn = () => {
               />
             </div>
             <div className={styles.checkBoxBlock}>
-              {/*TODO: after styles input checkbox add this place */}
-              <input
-                type="checkbox"
-                onChange={() => console.log("change checkbox")}
-                checked={true}
-              />
+              <CheckBox/>
               <p>Keep me signed in</p>
             </div>
             <LoginButton
