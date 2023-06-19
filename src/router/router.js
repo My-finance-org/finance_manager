@@ -1,22 +1,30 @@
-import { useRoutes, useNavigate, Navigate } from 'react-router-dom';
+import { Navigate } from "react-router-dom";
 
-export const PrivateRoute = ({ path, element}) => {
+export const PrivateRoute = ({ element }) => {
   const isAuthenticated = true;
-  const navigate = useNavigate();
 
   if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
+    return (
+      <Navigate
+        to="/login"
+        replace
+      />
+    );
   }
 
   return element;
 };
 
-export const PublicRoute = ({ path, restricted, element }) => {
+export const PublicRoute = ({ restricted, element }) => {
   const isAuthenticated = false;
-  const navigate = useNavigate();
 
   if (isAuthenticated && restricted) {
-    return <Navigate to="/" replace />;
+    return (
+      <Navigate
+        to="/"
+        replace
+      />
+    );
   }
 
   return element;
