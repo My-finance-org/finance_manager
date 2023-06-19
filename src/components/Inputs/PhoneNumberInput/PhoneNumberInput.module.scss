@@ -5,18 +5,17 @@
     .input {
         width: 100%;
         background-color: transparent;
-        border: 1px solid #4B5768;
+        border: 1px solid #D0D5DD;
         padding: 11px 60px;
         border-radius: 8px;
         font-size: 16px;
         font-weight: 400;
-        color: #D0D5DD;
+        color: #4B5768;
         outline: none;
 
         &:focus {
             transition: .2s;
-            border-color: #D0D5DD;
-            color: #D0D5DD;
+            border-color: #4B5768;
             background-color: transparent;
             outline: none;
             box-shadow: none;

@@ -7,12 +7,19 @@ import PasswordInput from "../../components/Inputs/PasswordInput";
 import LoginButton from "../../components/Buttons/LoginButton";
 import GoogleSiginInButton from "../../components/Buttons/GoogleSigiInButton";
 import styles from "./SignIn.module.scss";
+import CheckBox from "../../components/Inputs/CheckBox"
 
 export const SignIn = () => {
   const [singIn, setSingIn] = useState({
     email: "",
     password: "",
   });
+
+  const [chekBoxChecked, setChekBoxChecked] = useState(false)
+
+  const handleChange = () => {
+    setChekBoxChecked(!chekBoxChecked)
+  }
 
   return (
     <AuthLayout>
@@ -50,11 +57,9 @@ export const SignIn = () => {
               />
             </div>
             <div className={styles.checkBoxBlock}>
-              {/*TODO: after styles input checkbox add this place */}
-              <input
-                type="checkbox"
-                onChange={() => console.log("change checkbox")}
-                checked={true}
+              <CheckBox 
+              checked={chekBoxChecked}
+              onChange={handleChange}
               />
               <p>Keep me signed in</p>
             </div>
