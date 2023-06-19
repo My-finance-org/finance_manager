@@ -7,7 +7,7 @@ export const MainLayout = ({ children }) => {
   return (
     <div className={styles.MainLayout}>
       <SideBar />
-      <div>{children}</div>
+      <div className={styles.MainLayoutContent}>{children}</div>
     </div>
   );
 };

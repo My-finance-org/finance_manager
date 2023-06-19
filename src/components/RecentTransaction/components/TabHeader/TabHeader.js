@@ -7,13 +7,13 @@ const TabHeader = () => {
       data-uk-tab="{connect:'#recentTransaction'}"
     >
       <li className="tabTitle">
-        <a href="">All</a>
+        <a>All</a>
       </li>
       <li className="tabTitle">
-        <a href="">Revenue</a>
+        <a>Revenue</a>
       </li>
       <li className="tabTitle">
-        <a href="">Expenses</a>
+        <a>Expenses</a>
       </li>
     </ul>
   );

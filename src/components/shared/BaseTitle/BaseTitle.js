@@ -5,7 +5,7 @@ import styles from "./BaseTitle.module.scss";
 
 const BaseTitle = ({ text, fontSize, classes }) => {
   const baseTitleClss = classNames(styles.baseTitle, {
-    classes,
+    [`${classes}`]: classes,
     [`font${fontSize}`]: fontSize,
   });
 
