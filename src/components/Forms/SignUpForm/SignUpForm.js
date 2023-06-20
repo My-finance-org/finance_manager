@@ -18,7 +18,7 @@ export const SignUpForm = () => {
     <>
       <form className={styles.formContainer}>
         <div className={styles.inputBlock}>
-          <label> Email Address</label>
+          <label>Name</label>
           <TextInput
             onChange={({ target: { value } }) =>
               setSingUp({ ...singUp, name: value })
@@ -63,7 +63,7 @@ export const SignUpForm = () => {
           </div>
           <LoginButton
             onClick={() => console.log("click")}
-            text="Login"
+            text="Sign up"
           />
         </div>
       </form>
