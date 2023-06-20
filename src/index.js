@@ -14,11 +14,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <NotificationContextProvider>
         <ErrorBoundary>
           <App />
         </ErrorBoundary>
-      </NotificationContextProvider>
     </Provider>
   </React.StrictMode>
 );

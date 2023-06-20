@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SideBar from "../../components/SideBar";
+import SideBar from "@/components/SideBar";
 import styles from "./MainLayout.module.scss";
 
 export const MainLayout = ({ children }) => {
