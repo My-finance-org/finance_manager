@@ -4,7 +4,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 import styles from "./PhoneNumberInput.module.scss";
 
-const PhoneNumberInput = ({ value, onChange }) => {
+const PhoneNumberInput = ({ value, onChange, placeholder }) => {
   return (
     <PhoneInput
       onChange={onChange}
@@ -13,11 +13,12 @@ const PhoneNumberInput = ({ value, onChange }) => {
         name: "phone",
         required: true,
         autoFocus: true,
-        enableSearch: true,
+        enablesearch: true,
       }}
       containerClass={styles.inputContaier}
       inputClass={styles.input}
       dropdownClass={styles.dropdown}
+      placeholder={placeholder}
     />
   );
 };
@@ -25,6 +26,7 @@ const PhoneNumberInput = ({ value, onChange }) => {
 PhoneNumberInput.propTypes = {
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string.isRequired,
 };
 
 export default PhoneNumberInput;

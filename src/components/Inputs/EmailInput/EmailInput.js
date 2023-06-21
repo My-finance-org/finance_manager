@@ -7,7 +7,9 @@ const EmailInput = ({ placeHolder, value, onChange }) => {
     <input
       type="email"
       className={styles.EmailInput}
+      value={value}
       placeholder={placeHolder}
+      onChange={onChange}
     />
   );
 };
