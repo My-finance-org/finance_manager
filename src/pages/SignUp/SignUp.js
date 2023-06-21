@@ -4,6 +4,7 @@ import AuthLayout from "@/layouts/AuthLayout";
 import SiginUpForm from "@/components/Forms/SignUpForm";
 import Title from "@/components/shared/Title";
 import styles from "./SignUp.module.scss";
+import { RoutesEnum } from "@/constants/emun/routes";
 
 export const SignUp = () => {
   return (
@@ -16,7 +17,7 @@ export const SignUp = () => {
           <p className={styles.sigInText}>
             Already have an account?{" "}
             <Link
-              to="#"
+              to={RoutesEnum.SignIn}
               className={styles.colorText}
             >
               Sign in here
