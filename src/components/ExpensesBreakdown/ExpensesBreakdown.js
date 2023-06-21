@@ -1,5 +1,6 @@
 import React from "react";
 import BaseTitle from "../shared/BaseTitle";
+import ExpensesItem from "./components/ExpensesItem";
 import styles from "./ExpensesBreakdown.module.scss";
 
 const expensesArr = [
@@ -54,7 +55,16 @@ const ExpensesBreakdown = () => {
         text="Expenses Breakdown"
         fontSize={"22"}
       />
-      <div className={styles.content}></div>
+      <div className={styles.container}>
+        {expensesArr.map(item => {
+          return (
+            <ExpensesItem
+              item={item}
+              key={item.id}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
