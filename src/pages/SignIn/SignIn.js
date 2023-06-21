@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import AuthLayout from "../../layouts/AuthLayout";
-import Title from "../../components/shared/Title";
-import EmailInput from "../../components/Inputs/EmailInput";
-import PasswordInput from "../../components/Inputs/PasswordInput";
-import LoginButton from "../../components/Buttons/LoginButton";
-import GoogleSiginInButton from "../../components/Buttons/GoogleSigiInButton";
-import styles from "./SignIn.module.scss";
+import { RoutesEnum } from "@/constants/emun/routes";
+import AuthLayout from "@/layouts/AuthLayout";
+import Title from "@/components/shared/Title";
+import EmailInput from "@/components/Inputs/EmailInput";
+import PasswordInput from "@/components/Inputs/PasswordInput";
+import LoginButton from "@/components/Buttons/LoginButton";
+import GoogleSiginInButton from "@/components/Buttons/GoogleSigiInButton";
 import CheckBox from "@/components/Inputs/CheckBox";
+import styles from "./SignIn.module.scss";
 
 export const SignIn = () => {
   const [singIn, setSingIn] = useState({
@@ -51,7 +52,7 @@ export const SignIn = () => {
               />
             </div>
             <div className={styles.checkBoxBlock}>
-              <CheckBox/>
+              <CheckBox />
               <p>Keep me signed in</p>
             </div>
             <LoginButton
@@ -73,7 +74,7 @@ export const SignIn = () => {
           </div>
           <Link
             className={styles.createAccount}
-            to="/sign-up"
+            to={RoutesEnum.SignUp}
           >
             Create an account
           </Link>

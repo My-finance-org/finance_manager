@@ -1,6 +1,5 @@
 import * as React from "react";
 import SideBarLinksList from "./components/SideBarLinks/SideBarLinksList";
-
 import styles from "./SideBar.module.scss";
 import LogOutButton from "./components/LogOut";
 import ProfileLik from "./components/ProfileLik/ProfileLink";
