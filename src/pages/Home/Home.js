@@ -10,7 +10,6 @@ export const Home = () => {
   return (
     <MainLayout>
       <div className={styles.Home}>
-        <Header />
         <div className={styles.Content}>
           <RecentTransaction />
           <div>

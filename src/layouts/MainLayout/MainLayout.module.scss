@@ -1,10 +1,14 @@
-.MainLayout {
+.mainLayout {
   width: 100%;
   height: 100vh;
   display: flex;
   background: #f4f5f7;
 
-  .MainLayoutContent {
+  .mainLayoutWrapper {
+    width: 100%;
+  }
+
+  .mainLayoutContent {
     width: 100%;
   }
 }
