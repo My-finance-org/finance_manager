@@ -40,7 +40,10 @@ const AccountForm = () => {
           onChange={() => console.log("Full name")}
         />
       </div>
-      <LoginButton text="Update Profile" />
+      <LoginButton
+        text="Update Profile"
+        onClick={() => console.log("Update Profile")}
+      />
     </form>
   );
 };
