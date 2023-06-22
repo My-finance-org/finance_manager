@@ -6,7 +6,6 @@ import ProfileImage from "@/assets/Icons/ProfileImage.svg"
 import Dots from "@/assets/Icons/dots.svg"
 import styles from "./ProfileLink.module.scss";
 
-
 export default function ProfileLink(props) {
 
   const {userName, userPhoto} = props
