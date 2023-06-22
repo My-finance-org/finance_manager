@@ -1,7 +1,7 @@
 import React from "react";
 import SVG from "react-inlinesvg";
-import logOutIcon from "@/assets/Icons/LogOut.svg";
 import { NavLink } from "react-router-dom";
+import logOutIcon from "@/assets/Icons/LogOut.svg";
 import styles from "./LogOut.module.scss";
 
 

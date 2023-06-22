@@ -12,7 +12,7 @@ import Settings from "@/assets/Icons/Settings.svg";
 import styles from "./SideBarLinks.module.scss";
 
 export default function SideBarLinks(props) {
-    const {id, icon, text, path} = props
+    const {icon, text, path} = props
 
     const chooseIcon = icon => {
       switch(icon) {
@@ -33,8 +33,8 @@ export default function SideBarLinks(props) {
       }
     }
   return (
-    <NavLink to={path} className={styles.linkItem} key={id} activeClassName="active">
-      <div className={styles.linkBox}>
+    <NavLink to={path} className={styles.linkItem} activeclassname="active">
+      <div className={styles.linkBox} >
         <SVG 
         src={chooseIcon(icon)}
         className="navLinkIcon"
@@ -46,7 +46,6 @@ export default function SideBarLinks(props) {
 }
 
 SideBarLinks.propTypes = {
-  id: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,

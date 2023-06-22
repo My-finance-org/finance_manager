@@ -1,21 +1,23 @@
 import React from "react";
-import SVG from "react-inlinesvg";
 import { NavLink } from "react-router-dom";
+import SVG from "react-inlinesvg";
 import PropTypes from "prop-types";
 import ProfileImage from "@/assets/Icons/ProfileImage.svg"
 import Dots from "@/assets/Icons/dots.svg"
 import styles from "./ProfileLink.module.scss";
 
 
-export default function ProfileLik() {
+export default function ProfileLink(props) {
+
+  const {userName, userPhoto} = props
 
   return (
     <NavLink to={'/settings'} className={styles.profileLink}>
         <SVG
-        src={ProfileImage}
+        src={userPhoto}
         />
         <div className={styles.profileText}>
-            <p className={styles.userName}>Tanzir Rahman</p>
+            <p className={styles.userName}>{userName}</p>
             <p className={styles.linkText}>View profile</p>
         </div>
         <SVG
@@ -24,3 +26,8 @@ export default function ProfileLik() {
     </NavLink>
   );    
 }
+
+ProfileLink.propTypes = {
+  userName: PropTypes.string.isRequired,
+  userPhoto: PropTypes.string.isRequired,
+};

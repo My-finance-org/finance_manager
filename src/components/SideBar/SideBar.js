@@ -1,9 +1,9 @@
 import * as React from "react";
 import SideBarLinksList from "./components/SideBarLinks/SideBarLinksList";
-
-import styles from "./SideBar.module.scss";
 import LogOutButton from "./components/LogOut";
-import ProfileLik from "./components/ProfileLik/ProfileLink";
+import ProfileLink from "./components/ProfileLink/ProfileLink";
+import userPhoto from '@/assets/Icons/ProfileImage.svg'
+import styles from "./SideBar.module.scss";
 
 export default function SideBar() {
   return (
@@ -17,7 +17,10 @@ export default function SideBar() {
       </div>
       <div className={styles.sideBarFooter}>
         <LogOutButton />
-        <ProfileLik />
+        <ProfileLink 
+        userName={'Tanzir Rahman'}
+        userPhoto={userPhoto}
+        />
       </div>
     </div>
   );
