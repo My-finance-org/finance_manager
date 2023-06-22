@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import SideBar from "../../components/SideBar";
 import Header from "@/components/Header";
-import styles from "./MainLayout.module.scss";
 import Loader from "@/components/Loader";
+import styles from "./MainLayout.module.scss";
 
 export const MainLayout = ({ children }) => {
   return (

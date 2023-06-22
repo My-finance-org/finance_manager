@@ -24,6 +24,7 @@
     "react-redux": "^8.1.0",
     "react-router-dom": "^6.12.1",
     "react-scripts": "5.0.1",
+    "recharts": "^2.7.2",
     "sass": "^1.63.4",
     "uikit": "^3.16.21",
     "uuidv4": "^6.2.13",
