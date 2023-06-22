@@ -8,7 +8,7 @@ const SearchInput = ({ placeHolder, vlaue, onChange }) => {
   return (
     <div className={styles.container}>
       <input
-        type="search"
+        type="text"
         className={styles.input}
         placeholder={placeHolder}
       />
