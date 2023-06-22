@@ -1,4 +1,5 @@
 import React from "react";
+import { RoutesEnum } from "@/constants/emun/routes";
 import BaseTitle from "@/components/shared/BaseTitle";
 import LinkWithIcon from "@/components/LinkWithIcon";
 import RightArrowGray from "@/assets/Icons/RightArrowGray.svg";
@@ -69,7 +70,7 @@ const RecentTransaction = () => {
           fontSize="22"
         />
         <LinkWithIcon
-          to="/transactions"
+          to={RoutesEnum.Transactions}
           text="View All"
           fontSize="12"
           icon={RightArrowGray}

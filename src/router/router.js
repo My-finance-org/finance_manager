@@ -1,3 +1,4 @@
+import { RoutesEnum } from "@/constants/emun/routes";
 import { Navigate } from "react-router-dom";
 
 export const PrivateRoute = ({ element }) => {
@@ -6,7 +7,7 @@ export const PrivateRoute = ({ element }) => {
   if (!isAuthenticated) {
     return (
       <Navigate
-        to="/login"
+        to={RoutesEnum.SignIn}
         replace
       />
     );
@@ -21,7 +22,7 @@ export const PublicRoute = ({ restricted, element }) => {
   if (isAuthenticated && restricted) {
     return (
       <Navigate
-        to="/"
+        to={RoutesEnum.Home}
         replace
       />
     );
