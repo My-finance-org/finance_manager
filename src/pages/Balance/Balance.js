@@ -9,24 +9,26 @@ import "./Balance.scss";
 export const Balance = () => {
   return (
     <MainLayout>
-      <BaseTitle
-        text="Account Details"
-        fontSize="22"
-        classes={"mt-16 mb-16"}
-      />
-      <AccountDetails />
-      <div>
+      <div className="balance">
         <BaseTitle
-          text="Transactions History"
+          text="Account Details"
           fontSize="22"
-          classes={"mt-32 mb-16"}
+          classes={"mt-16 mb-16"}
         />
-        <div className="table-wrapper">
-          <TransactionHistoryTable />
-          <LoginButton
-            text="Load More"
-            onClick={() => console.log("Load more balance")}
+        <AccountDetails />
+        <div>
+          <BaseTitle
+            text="Transactions History"
+            fontSize="22"
+            classes={"mt-32 mb-16"}
           />
+          <div className="table-wrapper">
+            <TransactionHistoryTable />
+            <LoginButton
+              text="Load More"
+              onClick={() => console.log("Load more balance")}
+            />
+          </div>
         </div>
       </div>
     </MainLayout>
