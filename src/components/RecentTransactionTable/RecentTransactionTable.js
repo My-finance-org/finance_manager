@@ -5,7 +5,7 @@ import currencyFormatter from "@/helpers/currencyFormater";
 import dateFormater from "@/helpers/dateFormater";
 import GameIcon from "@/assets/Icons/HouseIcon.svg";
 
-const TransactionTable = ({ transactions }) => {
+const RecentTransactionTable = ({ transactions }) => {
   return (
     <Table>
       <TableHeader>
@@ -37,4 +37,4 @@ const TransactionTable = ({ transactions }) => {
   );
 };
 
-export default TransactionTable;
+export default RecentTransactionTable;
