@@ -52,6 +52,15 @@ body {
   line-height: 28px;
 }
 
+.active{
+  background-color: #299D91;
+  color: #ffffff;
+  font-weight: 600;
+
+  &:hover{
+    background-color: #299D91;
+  }
+}
 a {
   &:hover {
     text-decoration: none;
