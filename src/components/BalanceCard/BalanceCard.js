@@ -35,7 +35,7 @@ const BalanceCard = ({}) => {
         <div className="footer">
           <div className="remove">Remove</div>
           <Link
-            to={"/"}
+            to={"/balances/1"}
             className="button"
           >
             <div className="details">Details</div>

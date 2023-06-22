@@ -12,6 +12,8 @@ import { Bar } from "react-chartjs-2";
 import getRandomNumber from "@/helpers/getRandomNumber";
 import BaseTitle from "@/components/shared/BaseTitle";
 import "./VerticalBarChart.scss";
+import { useLocation } from "react-router-dom";
+import { RoutesEnum } from "@/constants/emun/routes";
 
 ChartJS.register(
   CategoryScale,
@@ -83,39 +85,62 @@ const options = {
   },
 };
 
-const labels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const labelsWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const labelsMonth = [
+  "Jan",
+  "Fab",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: "This week",
-      data: labels.map(() => getRandomNumber(0, 250000)),
-      backgroundColor: "#299D91",
-      barThickness: 15,
-      borderRadius: 5,
-    },
-    {
-      label: "Last week",
-      data: labels.map(() => getRandomNumber(0, 250000)),
-      backgroundColor: "#E8E8E8",
-      barThickness: 15,
-      borderRadius: 5,
-    },
-  ],
+const getData = period => {
+  const labels = period === "week" ? labelsWeek : labelsMonth;
+
+  return {
+    labels,
+    datasets: [
+      {
+        label: "This week",
+        data: labels.map(() => getRandomNumber(0, 250000)),
+        backgroundColor: "#299D91",
+        barThickness: 15,
+        borderRadius: 5,
+      },
+      {
+        label: "Last week",
+        data: labels.map(() => getRandomNumber(0, 250000)),
+        backgroundColor: "#E8E8E8",
+        barThickness: 15,
+        borderRadius: 5,
+      },
+    ],
+  };
 };
 
-const VerticalBarChart = () => {
+const VerticalBarChart = ({ period }) => {
+  const { pathname } = useLocation();
+  const isExpensesPage = pathname === RoutesEnum.Expenses;
+
   return (
     <div className="VerticalBarChart">
-      <BaseTitle
-        text={"Statistics"}
-        fontSize={"22"}
-        classes={"title"}
-      />
+      {!isExpensesPage && (
+        <BaseTitle
+          text={"Statistics"}
+          fontSize={"22"}
+          classes={"title"}
+        />
+      )}
       <Bar
         options={options}
-        data={data}
+        data={getData(period)}
         className="BarChart"
       />
     </div>

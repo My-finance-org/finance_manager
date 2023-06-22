@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
-* {
+*,
+body {
   box-sizing: border-box;
 }
 body {
@@ -52,13 +53,13 @@ body {
   line-height: 28px;
 }
 
-.active{
-  background-color: #299D91;
+.active {
+  background-color: #299d91;
   color: #ffffff;
   font-weight: 600;
 
-  &:hover{
-    background-color: #299D91;
+  &:hover {
+    background-color: #299d91;
   }
 }
 a {
