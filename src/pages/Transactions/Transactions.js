@@ -2,7 +2,7 @@ import React from "react";
 import { MainLayout } from "@/layouts/MainLayout/MainLayout";
 import BaseTitle from "@/components/shared/BaseTitle";
 import { Tab, TabContent, TabHeader, Tabs } from "@/components/Tabs";
-import TransactionTable from "@/components/TransactionTable";
+import RecentTransactionTable from "@/components/RecentTransactionTable";
 import { transactions } from "@/constants/transaction";
 import LoginButton from "@/components/Buttons/LoginButton";
 import "./Transactions.scss";
@@ -24,14 +24,14 @@ export const Transactions = () => {
           </TabHeader>
           <TabContent>
             <div className="table-wrapper">
-              <TransactionTable transactions={transactions} />
+              <RecentTransactionTable transactions={transactions} />
               <LoginButton
                 text="Load More"
                 onClick={() => console.log("Load more firs tab")}
               />
             </div>
             <div className="table-wrapper">
-              <TransactionTable
+              <RecentTransactionTable
                 transactions={transactions.filter(t => t.revenue)}
               />
               <LoginButton
@@ -40,7 +40,7 @@ export const Transactions = () => {
               />
             </div>
             <div className="table-wrapper">
-              <TransactionTable
+              <RecentTransactionTable
                 transactions={transactions.filter(t => t.expenses)}
               />
               <LoginButton
