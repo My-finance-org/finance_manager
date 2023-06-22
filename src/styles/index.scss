@@ -56,3 +56,19 @@ a {
     text-decoration: none;
   }
 }
+
+.uk-tab {
+  margin-bottom: 12px;
+
+  a {
+    font-size: 16px;
+  }
+  &::before {
+    display: none !important;
+  }
+}
+
+.uk-active > a {
+  color: #299d91 !important;
+  border-bottom: 2px solid #299d91 !important;
+}

@@ -5,61 +5,8 @@ import LinkWithIcon from "@/components/LinkWithIcon";
 import RightArrowGray from "@/assets/Icons/RightArrowGray.svg";
 import TabContent from "@/components/RecentTransaction/components/TabContent";
 import TabHeader from "@/components/RecentTransaction/components/TabHeader";
+import { transactions } from "@/constants/transaction";
 import "./RecentTransaction.scss";
-
-// TODO delete and add data from storage
-const transactions = [
-  {
-    id: 1,
-    icon: "Game",
-    name: "GTR 5",
-    category: "Gadget & Gear",
-    amount: 160,
-    date: "2023-05-17",
-    revenue: true,
-    expenses: false,
-  },
-  {
-    id: 2,
-    icon: "Game 2",
-    name: "GTR 5",
-    category: "Gadget & Gear",
-    amount: 160,
-    date: "2023-05-17",
-    revenue: true,
-    expenses: false,
-  },
-  {
-    id: 3,
-    icon: "Game 3",
-    name: "GTR 5",
-    category: "Gadget & Gear",
-    amount: 160,
-    date: "2023-05-17",
-    revenue: false,
-    expenses: true,
-  },
-  {
-    id: 4,
-    icon: "Game 3",
-    name: "GTR 5",
-    category: "Gadget & Gear",
-    amount: 160,
-    date: "2023-05-17",
-    revenue: true,
-    expenses: false,
-  },
-  {
-    id: 5,
-    icon: "Game 3",
-    name: "GTR 5",
-    category: "Gadget & Gear",
-    amount: 160,
-    date: "2023-05-17",
-    revenue: false,
-    expenses: true,
-  },
-];
 
 const RecentTransaction = () => {
   return (
