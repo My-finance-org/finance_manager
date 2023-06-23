@@ -6,10 +6,6 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  Legend,
-  defs,
-  linearGradient,
-  stop,
 } from "recharts";
 import "./SavingSummaryChart.scss";
 import BaseTitle from "@/components/shared/BaseTitle";
@@ -18,7 +14,7 @@ const data = [
   {
     name: "May 01",
     lastManth: 4000,
-    thisManth: 2400,
+    thisManth: 6400,
     amt: 2400,
   },
   {
@@ -42,19 +38,19 @@ const data = [
   {
     name: "May 20",
     lastManth: 4400,
-    thisManth: 1400,
+    thisManth: 4400,
     amt: 2400,
   },
   {
     name: "May 25",
     lastManth: 2060,
-    thisManth: 2400,
+    thisManth: 5400,
     amt: 2400,
   },
   {
     name: "May 30",
     lastManth: 1000,
-    thisManth: 2400,
+    thisManth: 3400,
     amt: 2400,
   },
 ];
@@ -110,12 +106,12 @@ const SavingSummaryChart = () => {
             y2="1"
           >
             <stop
-              offset="30%"
+              offset="20%"
               stopColor="rgba(41, 157, 145, 0.5)"
               stopOpacity={0.8}
             />
             <stop
-              offset="70%"
+              offset="80%"
               stopColor="rgba(217, 217, 217, 0)"
               stopOpacity={0}
             />
