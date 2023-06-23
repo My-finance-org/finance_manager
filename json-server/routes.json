@@ -1,0 +1,10 @@
+{
+  "/api/*": "/$1",
+  "/user": "/user",
+  "/users": "/users",
+  "/balances": "/balances",
+  "/goals": "/goals",
+  "/settings": "/settings",
+  "/transactions": "/transactions",
+  "/finance": "/finance"
+}

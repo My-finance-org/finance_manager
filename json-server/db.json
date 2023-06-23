@@ -1,9 +1,45 @@
 {
-  "user": {},
-  "users": {},
-  "banalces": {},
+  "user": {
+    "id": 1,
+    "fullName": "Ivanov Ivan",
+    "email": "test@mail.com",
+    "userName": "userName",
+    "password": "password",
+    "phone": "+38050161428",
+    "imageId":""
+  },
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Ivanov Ivan",
+      "email": "test@mail.com",
+      "userName": "userName",
+      "password": "password",
+      "phone": "+38050161428",
+      "imageId":""
+    }
+  ],
+  "balances": [
+    {
+      "id":1,
+      "name":"name",
+      "category": "category",
+      "accountNumber": "",
+      "balance": "",
+      "userId": 1
+    },
+    {
+      "id":2,
+      "name":"name 2 ",
+      "category": "category 2",
+      "accountNumber": "",
+      "balance": "",
+      "userId": 2
+    }
+  ],
   "goals": {},
   "settings": {},
   "transactions": {},
-  "finance": {}
+  "finance": {},
+  "media": []
 }

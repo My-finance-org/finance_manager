@@ -1,9 +1,10 @@
-import axios from 'axios';
+import $config from "@/config/config";
+import axios from "axios";
 
 class AxiosWrapper {
   constructor() {
     this.api = axios.create({
-      baseURL: process.env.REACT_APP_BASE_API_URL
+      baseURL: $config.host,
     });
   }
 

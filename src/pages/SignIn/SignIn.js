@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { RoutesEnum } from "@/constants/emun/routes";
 import AuthLayout from "@/layouts/AuthLayout";
@@ -9,19 +9,37 @@ import LoginButton from "@/components/Buttons/LoginButton";
 import GoogleSiginInButton from "@/components/Buttons/GoogleSigiInButton";
 import CheckBox from "@/components/Inputs/CheckBox";
 import styles from "./SignIn.module.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { userLogin } from "@/store/AuthSlice";
 
 export const SignIn = () => {
+  const dispatch = useDispatch();
+  const { auth } = useSelector(state => state.auth);
+
   const [singIn, setSingIn] = useState({
     email: "",
     password: "",
   });
+
+  useEffect(() => {
+    console.log(auth);
+  }, [auth]);
+
+  const login = e => {
+    e.preventDefault();
+    console.log(singIn.email, singIn.password);
+    dispatch(userLogin({ email: singIn.email, password: singIn.password }));
+  };
 
   return (
     <AuthLayout>
       <div className={styles.singIn}>
         <div className={styles.container}>
           <Title text="<span> Finance </span> Manager. <span>IO</span>" />
-          <form className={styles.formContainer}>
+          <form
+            className={styles.formContainer}
+            onSubmit={login}
+          >
             <div className={styles.inputBlock}>
               <label> Email Address</label>
               <EmailInput
@@ -52,11 +70,14 @@ export const SignIn = () => {
               />
             </div>
             <div className={styles.checkBoxBlock}>
-              <CheckBox />
+              <CheckBox
+                checked={true}
+                onChange={() => {}}
+              />
               <p>Keep me signed in</p>
             </div>
             <LoginButton
-              onClick={() => console.log("click")}
+              onClick={() => {}}
               text="Login"
             />
           </form>
@@ -68,7 +89,7 @@ export const SignIn = () => {
           </div>
           <div className={styles.googleBtnWrapper}>
             <GoogleSiginInButton
-              onClick={() => console.log("login google")}
+              onClick={() => {}}
               text="Continue with Google"
             />
           </div>
