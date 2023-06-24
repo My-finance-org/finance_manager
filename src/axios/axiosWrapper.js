@@ -4,7 +4,7 @@ import axios from "axios";
 class AxiosWrapper {
   constructor() {
     this.api = axios.create({
-      baseURL: $config.host,
+      baseURL: $config.api.host,
     });
   }
 
