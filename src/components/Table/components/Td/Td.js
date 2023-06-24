@@ -1,7 +1,7 @@
 import React from "react";
 
-const Td = ({ children }) => {
-  return <td>{children}</td>;
+const Td = ({ children, className }) => {
+  return <td className={className}>{children}</td>;
 };
 
 export default Td;
