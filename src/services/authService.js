@@ -1,7 +1,7 @@
 import api from "@/axios/axiosWrapper";
 
 class AuthService {
-  async login(email, password) {
+  async login({ email, password }) {
     try {
       const response = await api.post("/login", { email, password });
       // Успешная авторизация
@@ -10,6 +10,19 @@ class AuthService {
     } catch (error) {
       // Ошибка авторизации
       console.error("Ошибка авторизации:", error);
+      return error;
+    }
+  }
+
+  async register(name, email, password) {
+    try {
+      const response = await api.post("/users", { name, email, password });
+      // Успешная авторизация
+      console.log("Успешная регистрация:", response);
+      return response.data;
+    } catch (error) {
+      // Ошибка авторизации
+      console.error("Ошибка регистрации:", error);
       return error;
     }
   }

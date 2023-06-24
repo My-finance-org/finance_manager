@@ -1,13 +1,5 @@
 {
-  "user": {
-    "id": 1,
-    "fullName": "Ivanov Ivan",
-    "email": "test@mail.com",
-    "userName": "userName",
-    "password": "password",
-    "phone": "+38050161428",
-    "imageId":""
-  },
+  "user": {},
   "users": [
     {
       "id": 1,
