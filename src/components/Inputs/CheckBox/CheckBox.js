@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./CheckBox.module.scss";
 
-const CheckBox = ({ checked }) => {
+const CheckBox = ({ checked, onChange }) => {
   return (
     <>
       <input
@@ -10,6 +10,7 @@ const CheckBox = ({ checked }) => {
         type="checkbox"
         className={styles.checkBox}
         checked={checked}
+        onChange={onChange}
       />
       <label
         htmlFor="checkbox"

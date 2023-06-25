@@ -12,6 +12,7 @@ import Transactions from "./pages/Transactions";
 import Balance from "./pages/Balance";
 import Notification from "./components/Notification";
 import { RoutesEnum } from "./constants/emun/routes";
+import api from "@/axios/axiosWrapper";
 import style from "./styles/App.module.scss";
 
 function App() {
