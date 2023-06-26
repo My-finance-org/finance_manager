@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./TextInput.module.scss";
 
-const TextInput = ({ placeHolder, value, onChange }) => {
+const TextInput = ({ placeHolder, value, onChange, required }) => {
   return (
     <input
       type="text"
@@ -10,6 +10,7 @@ const TextInput = ({ placeHolder, value, onChange }) => {
       placeholder={placeHolder}
       value={value}
       onChange={onChange}
+      required={required}
     />
   );
 };

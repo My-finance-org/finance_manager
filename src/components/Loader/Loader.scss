@@ -4,23 +4,23 @@
   height: 100%;
   display: block;
   position: absolute;
-  z-index: 10;
+  z-index: 1050;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .lds-ripple {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%);
   width: 80px;
   height: 80px;
+  display: inline-block;
+  position: absolute;
   z-index: 10;
 }
 .lds-ripple div {
   position: absolute;
-  border: 4px solid #191919;
+  border: 4px solid #299d91;
   opacity: 1;
   border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;

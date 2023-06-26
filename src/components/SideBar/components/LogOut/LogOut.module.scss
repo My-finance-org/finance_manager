@@ -8,9 +8,10 @@
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.08);
   margin-bottom: 44px;
-  transition: .1s;
+  transition: 0.1s;
+  cursor: pointer;
   &:hover {
-    transition: .1s;
+    transition: 0.1s;
     background-color: transparent;
     text-decoration: none;
   }

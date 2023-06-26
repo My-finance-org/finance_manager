@@ -1,4 +1,5 @@
 const fs = require("fs");
+const jwt = require("jsonwebtoken");
 const jsonServer = require("json-server");
 const path = require("path");
 
@@ -25,11 +26,40 @@ server.post("/api/login", (req, res) => {
     const { users } = db;
 
     // находим в бд пользователя с таким username и password
-    const userFromBd = users.find(
+    let userFromBd = users.find(
       user => user.email === email && user.password === password
     );
 
     if (userFromBd) {
+      const token = jwt.sign(userFromBd, "finance-manager");
+      userFromBd = { ...userFromBd, token };
+
+      return res.json(userFromBd);
+    }
+
+    return res.status(403).json({ message: "User not found" });
+  } catch (e) {
+    console.log(e);
+    return res.status(500).json({ message: e.message });
+  }
+});
+
+server.post("/api/auth", (req, res) => {
+  try {
+    const { token } = req.body;
+
+    const userDecoded = jwt.verify(token, "finance-manager");
+
+    const db = JSON.parse(
+      fs.readFileSync(path.resolve(__dirname, "db.json"), "UTF-8")
+    );
+    const { users } = db;
+
+    // находим в бд пользователя с таким username и password
+    let userFromBd = users.find(user => user.id === userDecoded.id);
+
+    if (userFromBd) {
+      console.log("userFromBd", userFromBd);
       return res.json(userFromBd);
     }
 

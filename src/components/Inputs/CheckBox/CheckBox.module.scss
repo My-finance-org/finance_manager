@@ -1,17 +1,18 @@
 .checkBox {
-    display: none;
+  display: none;
 }
 .label {
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 2px;
-    background-color: #D0D5DD;
-    transition: .2s;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: #d0d5dd;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 .checkBox:checked + .label {
-    transition: .2s;
-    background-color: #299D91;
-    background-image: url('../../../assets/Icons/Checkmark.svg');
+  transition: 0.2s;
+  background-color: #299d91;
+  background-image: url("../../../assets/Icons/Checkmark.svg");
 }

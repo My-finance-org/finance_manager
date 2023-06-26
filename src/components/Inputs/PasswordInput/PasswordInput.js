@@ -6,7 +6,7 @@ import ShowPasswordIcon from "@/assets/Icons/ShowPassword.svg";
 import HidePasswordIcon from "@/assets/Icons/HidePassword.svg";
 import styles from "./PasswordInput.module.scss";
 
-const PasswordInput = ({ placeHolder, value, onChange }) => {
+const PasswordInput = ({ placeHolder, value, onChange, required }) => {
   const [inputType, setInputType] = useState("password");
   const [passwordIcon, setPasswordIcon] = useState(ShowPasswordIcon);
   const [activeIconClass, setActiveIconClass] = useState(false);
@@ -37,6 +37,7 @@ const PasswordInput = ({ placeHolder, value, onChange }) => {
         placeholder={placeHolder}
         onChange={onChange}
         value={value}
+        required={required}
       />
       <SVG
         src={passwordIcon}

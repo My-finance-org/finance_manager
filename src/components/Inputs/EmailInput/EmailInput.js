@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./EmaiInput.module.scss";
 
-const EmailInput = ({ placeHolder, value, onChange }) => {
+const EmailInput = ({ placeHolder, value, onChange, required }) => {
   return (
     <input
       type="email"
@@ -10,6 +10,7 @@ const EmailInput = ({ placeHolder, value, onChange }) => {
       value={value}
       placeholder={placeHolder}
       onChange={onChange}
+      required={required}
     />
   );
 };

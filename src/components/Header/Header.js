@@ -1,20 +1,21 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import SVG from "react-inlinesvg";
 import BaseTitle from "../shared/BaseTitle";
 import dateFormater from "@/helpers/dateFormater";
-import SVG from "react-inlinesvg";
 import DoubleRightArrows from "@/assets/Icons/DoubleRightArrows.svg";
 import NotificationIcon from "@/assets/Icons/NotificationIcon.svg";
 import SearchInput from "../Inputs/SearchInput";
 import "./Header.scss";
 
 const Header = () => {
-  const name = "Tanzir";
+  const { user } = useSelector(state => state.auth);
   return (
     <div className="header">
       <div className="container">
         <div className="left-side">
           <BaseTitle
-            text={`Hello ${name}`}
+            text={`Hello ${user.fullName && user.fullName}`}
             fontSize={"24"}
             classes={"title"}
           />

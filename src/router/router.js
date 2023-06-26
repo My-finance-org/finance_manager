@@ -1,8 +1,9 @@
-import { RoutesEnum } from "@/constants/emun/routes";
 import { Navigate } from "react-router-dom";
+import { RoutesEnum } from "@/constants/emun/routes";
+import authService from "@/services/authService";
 
 export const PrivateRoute = ({ element }) => {
-  const isAuthenticated = true;
+  const isAuthenticated = authService.isAuthenticated();
 
   if (!isAuthenticated) {
     return (
@@ -17,7 +18,7 @@ export const PrivateRoute = ({ element }) => {
 };
 
 export const PublicRoute = ({ restricted, element }) => {
-  const isAuthenticated = false;
+  const isAuthenticated = authService.isAuthenticated();
 
   if (isAuthenticated && restricted) {
     return (
