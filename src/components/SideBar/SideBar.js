@@ -1,4 +1,7 @@
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutUser } from "@/store/AuthSlice";
 import SideBarLinksList from "./components/SideBarLinks/SideBarLinksList";
 import LogOutButton from "./components/LogOut";
 import ProfileLink from "./components/ProfileLink/ProfileLink";
@@ -6,6 +9,16 @@ import userPhoto from "@/assets/Icons/ProfileImage.svg";
 import styles from "./SideBar.module.scss";
 
 export default function SideBar() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const { user } = useSelector(state => state.auth);
+
+  const logout = () => {
+    dispatch(logoutUser());
+    navigate("/login");
+  };
+
   return (
     <div className={styles.SideBar}>
       <div className={styles.sideBarLinks}>
@@ -16,9 +29,9 @@ export default function SideBar() {
         <SideBarLinksList />
       </div>
       <div className={styles.sideBarFooter}>
-        <LogOutButton />
+        <LogOutButton onClick={logout} />
         <ProfileLink
-          userName={"Tanzir Rahman"}
+          userName={user.fullName && user.fullName}
           userPhoto={userPhoto}
         />
       </div>

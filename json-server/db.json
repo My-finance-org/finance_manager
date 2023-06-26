@@ -8,21 +8,90 @@
       "userName": "userName",
       "password": "password",
       "phone": "+38050161428",
-      "imageId":""
+      "imageId": ""
+    },
+    {
+      "id": "d472fc12-32e6-4dd3-9b85-41f4d98eec2b",
+      "fullName": {
+        "nickname": "kastelatas",
+        "email": "test2@mail.com",
+        "password": "password"
+      },
+      "userName": {
+        "nickname": "kastelatas",
+        "email": "test2@mail.com",
+        "password": "password"
+      },
+      "phone": null,
+      "imageId": null
+    },
+    {
+      "id": "fb6ffd93-08ca-4a68-8dd7-c35fd4819996",
+      "fullName": "kastelatas",
+      "email": "test2@mail.com",
+      "userName": "kastelatas",
+      "password": "password",
+      "phone": null,
+      "imageId": null
+    },
+    {
+      "id": "c95e38e0-0c40-429b-8065-3d49ad33dc49",
+      "fullName": "test3",
+      "email": "test3@mail.com",
+      "userName": "test3",
+      "password": "password",
+      "phone": null,
+      "imageId": null
+    },
+    {
+      "id": "2a541b50-b7d1-4cd3-8fa0-016b756919e0",
+      "fullName": "tets4",
+      "email": "test4@mail.com",
+      "userName": "tets4",
+      "password": "password",
+      "phone": null,
+      "imageId": null
+    },
+    {
+      "id": "2f895aa2-b4ec-474f-9a21-1b106ffdde42",
+      "fullName": "test5",
+      "email": "test5@mail.com",
+      "userName": "test5",
+      "password": "password",
+      "phone": null,
+      "imageId": null
+    },
+    {
+      "id": "69e4c56b-b29a-457f-a0bb-c895dbc29d35",
+      "fullName": "test1",
+      "email": "test1@mail.com",
+      "userName": "test1",
+      "password": "password",
+      "phone": null,
+      "imageId": null
+    },
+    {
+      "id": "338c19c9-61a0-4645-bd4e-6ff410cb6cb4",
+      "fullName": "test2",
+      "email": "test2@mail.com",
+      "userName": "test2",
+      "password": "1234",
+      "phone": null,
+      "imageId": null
     }
   ],
   "balances": [
     {
-      "id":1,
-      "name":"name",
+      "id": 1,
+      "name": "name",
       "category": "category",
       "accountNumber": "",
       "balance": "",
       "userId": 1
     },
     {
-      "id":2,
-      "name":"name 2 ",
+      "id": 2,
+      "name": "name 2 ",
       "category": "category 2",
       "accountNumber": "",
       "balance": "",

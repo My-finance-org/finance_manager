@@ -1,27 +1,33 @@
 import api from "@/axios/axiosWrapper";
+import { v4 as uuidv4 } from "uuid";
 
 class AuthService {
   async login({ email, password }) {
     try {
       const response = await api.post("/login", { email, password });
-      // Успешная авторизация
       console.log("Успешная авторизация:", response);
-      return response.data;
+      return response;
     } catch (error) {
-      // Ошибка авторизации
       console.error("Ошибка авторизации:", error);
       return error;
     }
   }
 
-  async register(name, email, password) {
+  async register({ nickname, email, password }) {
     try {
-      const response = await api.post("/users", { name, email, password });
-      // Успешная авторизация
+      const user = {
+        id: uuidv4(),
+        fullName: nickname,
+        email: email,
+        userName: nickname,
+        password: password,
+        phone: null,
+        imageId: null,
+      };
+      const response = await api.post("/users", user);
       console.log("Успешная регистрация:", response);
-      return response.data;
+      return response;
     } catch (error) {
-      // Ошибка авторизации
       console.error("Ошибка регистрации:", error);
       return error;
     }
@@ -30,17 +36,14 @@ class AuthService {
   async signOut() {
     try {
       const response = await api.post("/signout");
-      // Успешный выход из аккаунта
       console.log("Успешный выход из аккаунта:", response.data);
 
       if (response.ok) {
-        // Очистить данные аутентификации после успешного выхода
         localStorage.removeItem("token");
       } else {
         throw new Error("Logout failed");
       }
     } catch (error) {
-      // Ошибка при выходе из аккаунта
       console.error("Ошибка при выходе из аккаунта:", error);
     }
   }
@@ -48,10 +51,8 @@ class AuthService {
   async authWithToken(token) {
     try {
       const response = await api.post("/auth", { token });
-      // Успешная авторизация по токену
-      console.log("Успешная авторизация по токену:", response.data);
+      return response;
     } catch (error) {
-      // Ошибка авторизации по токену
       console.error("Ошибка авторизации по токену:", error);
     }
   }

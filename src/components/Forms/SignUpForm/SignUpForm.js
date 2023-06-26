@@ -1,40 +1,87 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import EmailInput from "@/components/Inputs/EmailInput";
 import PasswordInput from "@/components/Inputs/PasswordInput";
 import LoginButton from "@/components/Buttons/LoginButton";
 import GoogleSiginInButton from "@/components/Buttons/GoogleSigiInButton";
 import TextInput from "@/components/Inputs/TextInput";
+import { register as userRegister } from "@/store/AuthSlice";
+import { NotificationContext } from "@/contexts/NotificationContext/NotificationContext";
+import { NotificationEnum } from "@/constants/emun/notifications";
+import { RoutesEnum } from "@/constants/emun/routes";
 import styles from "./SignUpForm.module.scss";
+import validateEmail from "@/validators/validateEmail";
+import validatePassword from "@/validators/validatePassword";
 
 export const SignUpForm = () => {
-  const [singUp, setSingUp] = useState({
-    name: "",
+  const dispatch = useDispatch();
+  const { user, error } = useSelector(state => state.auth);
+  const navigate = useNavigate();
+  const { addNotification } = useContext(NotificationContext);
+  const [signUp, setSignUp] = useState({
+    nickname: "",
     email: "",
     password: "",
   });
 
+  const register = async e => {
+    e.preventDefault();
+
+    if (!validateEmail(signUp.email)) {
+      addNotification(NotificationEnum.WrongEmail);
+      return;
+    }
+
+    if (validatePassword(signUp.password)) {
+      addNotification(NotificationEnum.WrongPassword);
+      return;
+    }
+
+    dispatch(
+      userRegister({
+        nickname: signUp.nickname,
+        email: signUp.email,
+        password: signUp.password,
+      })
+    ).then(data => {
+      addNotification(NotificationEnum.RegisterSuccess);
+      navigate(RoutesEnum.SignIn);
+    });
+  };
+
+  useEffect(() => {
+    if (error) {
+      addNotification(NotificationEnum.WrongAuthData);
+    }
+  }, [error]);
+
   return (
     <>
-      <form className={styles.formContainer}>
+      <form
+        className={styles.formContainer}
+        onSubmit={register}
+      >
         <div className={styles.inputBlock}>
           <label>Name</label>
           <TextInput
             onChange={({ target: { value } }) =>
-              setSingUp({ ...singUp, name: value })
+              setSignUp({ ...signUp, nickname: value })
             }
             placeHolder="Your name"
-            value={singUp.name}
+            value={signUp.nickname}
+            required={true}
           />
         </div>
         <div className={styles.inputBlock}>
           <label> Email Address</label>
           <EmailInput
             onChange={({ target: { value } }) =>
-              setSingUp({ ...singUp, email: value })
+              setSignUp({ ...signUp, email: value })
             }
             placeHolder="Email Address"
-            value={singUp.email}
+            value={signUp.email}
+            required={true}
           />
         </div>
         <div className={styles.inputBlock}>
@@ -43,10 +90,11 @@ export const SignUpForm = () => {
           </div>
           <PasswordInput
             onChange={({ target: { value } }) =>
-              setSingUp({ ...singUp, password: value })
+              setSignUp({ ...signUp, password: value })
             }
-            value={singUp.password}
+            value={signUp.password}
             placeHolder="Password"
+            required={true}
           />
         </div>
         <div className={styles.buttonsection}>
