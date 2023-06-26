@@ -48,10 +48,4 @@ const PasswordInput = ({ placeholder, value, onChange, required }) => {
   );
 };
 
-PasswordInput.propTypes = {
-  placeholder: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-};
-
 export default PasswordInput;

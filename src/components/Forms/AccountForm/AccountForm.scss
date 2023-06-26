@@ -1,4 +1,8 @@
 .account-form {
+  .form-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
   .input-wrapper {
     max-width: 540px;
     display: flex;

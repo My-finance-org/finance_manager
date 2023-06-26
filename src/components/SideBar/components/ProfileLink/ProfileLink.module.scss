@@ -13,6 +13,13 @@
     text-decoration: none;
     color: #fff;
   }
+
+  .imgWrapper {
+    width: 33px;
+    height: 33px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
   .profileText {
     .userName {
       margin: 0;

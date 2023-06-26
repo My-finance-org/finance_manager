@@ -13,7 +13,12 @@ export default function ProfileLink(props) {
       to={"/settings"}
       className={styles.profileLink}
     >
-      <SVG src={userPhoto} />
+      <div className={styles.imgWrapper}>
+        <img
+          src={userPhoto}
+          alt=""
+        />
+      </div>
       <div className={styles.profileText}>
         <p className={styles.userName}>{userName && userName}</p>
         <p className={styles.linkText}>View profile</p>
