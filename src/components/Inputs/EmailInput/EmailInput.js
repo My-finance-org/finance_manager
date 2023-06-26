@@ -16,7 +16,7 @@ const EmailInput = ({ placeholder, value, onChange, required }) => {
 };
 
 EmailInput.propTypes = {
-  placeholder: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };

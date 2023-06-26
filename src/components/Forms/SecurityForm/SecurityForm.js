@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import PhoneNumberInput from "@/components/Inputs/PhoneNumberInput";
 import LoginButton from "@/components/Buttons/LoginButton";
 import PasswordInput from "@/components/Inputs/PasswordInput";
 import "./SecurityForm.scss";
-import { updateProfile } from "@/store/AuthSlice";
+import { updateProfile } from "@/store/SettingsSlice";
 
 const SecurityForm = () => {
   const dispatch = useDispatch();
@@ -43,7 +42,7 @@ const SecurityForm = () => {
         <label>Old Password</label>
         <PasswordInput
           placeholder={security.oldPassword}
-          value={security.oldPassword}
+          value={security.oldPassword || ""}
           onChange={({ target: { value } }) => {
             setSecurity({ ...security, oldPassword: value });
           }}
@@ -53,7 +52,7 @@ const SecurityForm = () => {
         <label>New Password</label>
         <PasswordInput
           placeholder={security.newPassword}
-          value={security.newPassword}
+          value={security.newPassword || ""}
           onChange={({ target: { value } }) => {
             setSecurity({ ...security, newPassword: value });
           }}
@@ -63,7 +62,7 @@ const SecurityForm = () => {
         <label>Retype Password</label>
         <PasswordInput
           placeholder={security.repeatPassword}
-          value={security.repeatPassword}
+          value={security.repeatPassword || ""}
           onChange={({ target: { value } }) => {
             setSecurity({ ...security, repeatPassword: value });
           }}

@@ -26,6 +26,13 @@ body {
   flex-wrap: wrap;
 }
 
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
 .font12 {
   font-size: 12px;
   line-height: 16px;
