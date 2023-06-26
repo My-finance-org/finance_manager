@@ -38,6 +38,16 @@ class AxiosWrapper {
     }
   }
 
+  async patch(url, data, config) {
+    try {
+      const response = await this.api.patch(url, data, config);
+      return response.data;
+    } catch (error) {
+      // Обработка ошибок
+      throw error;
+    }
+  }
+
   async delete(url, config) {
     try {
       const response = await this.api.delete(url, config);

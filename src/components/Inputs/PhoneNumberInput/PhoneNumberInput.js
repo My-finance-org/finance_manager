@@ -13,7 +13,7 @@ const PhoneNumberInput = ({ value, onChange, placeholder }) => {
         name: "phone",
         required: true,
         autoFocus: true,
-        enablesearch: true,
+        enablesearch: "true",
       }}
       containerClass={styles.inputContaier}
       inputClass={styles.input}

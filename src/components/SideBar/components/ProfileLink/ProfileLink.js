@@ -6,7 +6,7 @@ import Dots from "@/assets/Icons/dots.svg";
 import styles from "./ProfileLink.module.scss";
 
 export default function ProfileLink(props) {
-  const { userName, userPhoto } = props;
+  const { userName = "", userPhoto } = props;
 
   return (
     <NavLink
@@ -15,7 +15,7 @@ export default function ProfileLink(props) {
     >
       <SVG src={userPhoto} />
       <div className={styles.profileText}>
-        <p className={styles.userName}>{userName}</p>
+        <p className={styles.userName}>{userName && userName}</p>
         <p className={styles.linkText}>View profile</p>
       </div>
       <SVG src={Dots} />

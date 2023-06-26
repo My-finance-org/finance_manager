@@ -11,6 +11,14 @@ export const register = createAsyncThunk("auth/register", async userData => {
   return response;
 });
 
+export const updateProfile = createAsyncThunk(
+  "auth/updateProfile",
+  async profile => {
+    const response = await authService.updateProfile(profile);
+    return response;
+  }
+);
+
 export const auth = createAsyncThunk("auth/check", async token => {
   const response = await authService.authWithToken(token);
   return response;
@@ -63,13 +71,25 @@ const authSlice = createSlice({
       state.error = action.error.message;
     });
 
+    builder.addCase(updateProfile.pending, state => {
+      state.loading = true;
+      state.error = null;
+    });
+    builder.addCase(updateProfile.fulfilled, (state, action) => {
+      state.loading = false;
+      state.user = action.payload;
+    });
+    builder.addCase(updateProfile.rejected, (state, action) => {
+      state.loading = false;
+      state.error = action.error.message;
+    });
+
     builder.addCase(auth.pending, state => {
       state.loading = true;
       state.error = null;
     });
     builder.addCase(auth.fulfilled, (state, action) => {
       state.loading = false;
-      console.log("AUTH action.payload", action.payload);
       state.user = action.payload;
     });
     builder.addCase(auth.rejected, (state, action) => {

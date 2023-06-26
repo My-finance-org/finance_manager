@@ -14,11 +14,13 @@ const Header = () => {
     <div className="header">
       <div className="container">
         <div className="left-side">
-          <BaseTitle
-            text={`Hello ${user.fullName && user.fullName}`}
-            fontSize={"24"}
-            classes={"title"}
-          />
+          {user.fullName && (
+            <BaseTitle
+              text={`Hello ${user.fullName}`}
+              fontSize={"24"}
+              classes={"title"}
+            />
+          )}
           <div className="date">
             <SVG src={DoubleRightArrows} />
             <span>{dateFormater(new Date())}</span>
