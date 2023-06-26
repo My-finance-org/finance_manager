@@ -3,27 +3,12 @@
   "users": [
     {
       "id": 1,
-      "fullName": "Ivanov Ivan",
+      "fullName": "Ivanov Ivan1",
       "email": "test@mail.com",
       "userName": "userName",
       "password": "password",
       "phone": "+38050161428",
       "imageId": ""
-    },
-    {
-      "id": "d472fc12-32e6-4dd3-9b85-41f4d98eec2b",
-      "fullName": {
-        "nickname": "kastelatas",
-        "email": "test2@mail.com",
-        "password": "password"
-      },
-      "userName": {
-        "nickname": "kastelatas",
-        "email": "test2@mail.com",
-        "password": "password"
-      },
-      "phone": null,
-      "imageId": null
     },
     {
       "id": "fb6ffd93-08ca-4a68-8dd7-c35fd4819996",
@@ -63,11 +48,11 @@
     },
     {
       "id": "69e4c56b-b29a-457f-a0bb-c895dbc29d35",
-      "fullName": "test1",
+      "fullName": "TEST FULL1",
       "email": "test1@mail.com",
       "userName": "test1",
-      "password": "password",
-      "phone": null,
+      "password": "password1",
+      "phone": "380512345689",
       "imageId": null
     },
     {

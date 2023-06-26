@@ -30,10 +30,12 @@ export default function SideBar() {
       </div>
       <div className={styles.sideBarFooter}>
         <LogOutButton onClick={logout} />
-        <ProfileLink
-          userName={user.fullName && user.fullName}
-          userPhoto={userPhoto}
-        />
+        {user.id && (
+          <ProfileLink
+            userName={user.fullName}
+            userPhoto={userPhoto}
+          />
+        )}
       </div>
     </div>
   );

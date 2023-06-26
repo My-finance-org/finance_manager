@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./EmaiInput.module.scss";
 
-const EmailInput = ({ placeHolder, value, onChange, required }) => {
+const EmailInput = ({ placeholder, value, onChange, required }) => {
   return (
     <input
       type="email"
       className={styles.EmailInput}
       value={value}
-      placeholder={placeHolder}
+      placeholder={placeholder}
       onChange={onChange}
       required={required}
     />
@@ -16,7 +16,7 @@ const EmailInput = ({ placeHolder, value, onChange, required }) => {
 };
 
 EmailInput.propTypes = {
-  placeHolder: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };

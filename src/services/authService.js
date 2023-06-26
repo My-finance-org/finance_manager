@@ -57,6 +57,15 @@ class AuthService {
     }
   }
 
+  async updateProfile(profile) {
+    try {
+      const response = await api.patch(`/users/${profile.id}`, { ...profile });
+      return response;
+    } catch (error) {
+      console.error("Ошибка авторизации по токену:", error);
+    }
+  }
+
   isAuthenticated() {
     const token = localStorage.getItem("token");
     return !!token;
