@@ -1,8 +1,8 @@
 import React from "react";
 import SVG from "react-inlinesvg";
-import TransactionCategory from "../../../../assets/Icons/TransactionCategory.svg";
-import currencyFormater from "../../../../helpers/currencyFormater";
-import dateFormater from "../../../../helpers/dateFormater";
+import TransactionCategory from "@/assets/Icons/TransactionCategory.svg";
+import currencyFormater from "@/helpers/currencyFormater";
+import dateFormater from "@/helpers/dateFormater";
 
 const TabContent = ({ transactions }) => {
   return (
@@ -16,8 +16,8 @@ const TabContent = ({ transactions }) => {
             <div className="flex">
               <SVG src={TransactionCategory} />
               <div>
-                <p className="title">{transaction.name}</p>
-                <p className="subtitle">{transaction.category}</p>
+                <p className="title">{transaction.item}</p>
+                <p className="subtitle">{transaction.shopName}</p>
               </div>
             </div>
             <div>

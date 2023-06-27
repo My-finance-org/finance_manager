@@ -1,5 +1,5 @@
-import settingsService from "@/services/settingsService";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import settingsService from "@/services/settingsService";
 
 export const updateProfile = createAsyncThunk(
   "settings/updateProfile",

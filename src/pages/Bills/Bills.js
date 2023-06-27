@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { MainLayout } from "../../layouts/MainLayout/MainLayout";
 import BaseTitle from "@/components/shared/BaseTitle";
 import { Table, TableBody, TableHeader, Td, Th, Tr } from "@/components/Table";
+import BillModal from "@/components/Modals/BillModal";
 import dateFormater from "@/helpers/dateFormater";
 import { bill } from "@/constants/bill";
-import BillModal from "@/components/Modals/BillModal";
 import styles from "./Bills.module.scss";
 
 export const Bills = () => {
@@ -28,6 +28,7 @@ export const Bills = () => {
             classes={"transactions-title"}
           />
           <button
+            type="button"
             className={styles["modal-open"]}
             onClick={() => setIsOpenModal(true)}
           >
@@ -78,7 +79,7 @@ export const Bills = () => {
                   <Td>
                     <div className={styles.descriptionBlock}>
                       <div className={styles.descriptionTitle}> {b.name}</div>
-                      <div className={styles.description}>{b.descriptions}</div>
+                      <div className={styles.description}>{b.description}</div>
                     </div>
                   </Td>
                   <Td>

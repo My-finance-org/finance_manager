@@ -1,5 +1,5 @@
-import authService from "@/services/authService";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import authService from "@/services/authService";
 
 export const login = createAsyncThunk("auth/login", async userData => {
   const response = await authService.login(userData);

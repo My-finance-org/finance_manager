@@ -6,7 +6,7 @@ export const bill = [
     id: 1,
     logo: Figma,
     name: "Figma - Yearly plan",
-    descriptions:
+    description:
       "For advanced security and more flexible controls, the Professional plan helps you scale design processes company-wide.",
     date: "2023-05-15",
     updateDate: "2023-05-17",
@@ -16,7 +16,7 @@ export const bill = [
     id: 2,
     logo: Adobe,
     name: "Adobe Inc - Yearly plan",
-    descriptions:
+    description:
       "For advanced security and more flexible controls, the Professional plan helps you scale design processes company-wide.",
     date: "2023-05-17",
     updateDate: "2023-05-17",

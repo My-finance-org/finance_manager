@@ -18,20 +18,21 @@ const RecentTransactionTable = ({ transactions }) => {
         </Tr>
       </TableHeader>
       <TableBody>
-        {transactions.map(t => {
-          return (
-            <Tr key={t.id}>
-              <Td>
-                <SVG src={GameIcon} />
-                {t.name}
-              </Td>
-              <Td>{t.category}</Td>
-              <Td>{dateFormater(t.date)}</Td>
-              <Td>Credit Card</Td>
-              <Td>{currencyFormatter(t.amount)}</Td>
-            </Tr>
-          );
-        })}
+        {transactions &&
+          transactions.map(t => {
+            return (
+              <Tr key={t.id}>
+                <Td>
+                  <SVG src={GameIcon} />
+                  {t.item}
+                </Td>
+                <Td>{t.shopName}</Td>
+                <Td>{dateFormater(t.date)}</Td>
+                <Td>{t.paymentMethod}</Td>
+                <Td>{currencyFormatter(t.amount)}</Td>
+              </Tr>
+            );
+          })}
       </TableBody>
     </Table>
   );

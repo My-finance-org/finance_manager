@@ -1,30 +1,52 @@
 import React, { useEffect, useState } from "react";
 import Select from "react-select";
 import DatePicker from "react-date-picker";
+import { v4 as uuidv4 } from "uuid";
 import TextInput from "@/components/Inputs/TextInput";
 import Modal from "../Modal";
 import BaseTitle from "@/components/shared/BaseTitle";
+import CheckBox from "@/components/Inputs/CheckBox";
 import "./TransactionModal.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { createTransaction, getTransaction } from "@/store/TransactionSlice";
 
 const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
+  { value: "Credit Card", label: "Credit Card" },
+  { value: "Checking", label: "Checking" },
+  { value: "Savings", label: "Savings" },
+  { value: "Investment", label: "Investment" },
+  { value: "Loan", label: "Loan" },
 ];
 
 const TransactionModal = ({ isOpen, onClose }) => {
-  const [date, setDate] = useState(new Date());
+  const dispatch = useDispatch();
+  const { user } = useSelector(state => state.auth);
   const [transaction, setTransaction] = useState({
     item: "",
     shopName: "",
     date: null,
     paymentMethod: "",
     amount: "",
+    revenue: false,
+    expenses: false,
   });
 
-  const createTransaction = e => {
+  const create = e => {
     e.preventDefault();
-    console.log("transaction", transaction);
+    const newTransaction = { ...transaction, id: uuidv4(), userId: user.id };
+    console.log("transaction", newTransaction);
+    dispatch(createTransaction(newTransaction));
+    dispatch(getTransaction(user.id));
+    onClose();
+    setTransaction({
+      item: "",
+      shopName: "",
+      date: null,
+      paymentMethod: "",
+      amount: "",
+      revenue: false,
+      expenses: false,
+    });
   };
 
   return (
@@ -40,7 +62,7 @@ const TransactionModal = ({ isOpen, onClose }) => {
 
       <form
         className="transaction-modal__form"
-        onSubmit={createTransaction}
+        onSubmit={create}
       >
         <div className="input-wrapper">
           <label htmlFor="">Item</label>
@@ -88,6 +110,28 @@ const TransactionModal = ({ isOpen, onClose }) => {
             }}
             value={transaction.amount}
             placeholder="Enter Amount"
+          />
+        </div>
+        <div className="input-wrapper">
+          <label htmlFor="">Revenue</label>
+          <CheckBox
+            id={"Revenue"}
+            checked={transaction.revenue}
+            onChange={({ target: { checked } }) =>
+              setTransaction({ ...transaction, revenue: checked })
+            }
+            text={"Revenue"}
+          />
+        </div>
+        <div className="input-wrapper">
+          <label htmlFor="">Expenses</label>
+          <CheckBox
+            id={"Expenses"}
+            checked={transaction.expenses}
+            onChange={({ target: { checked } }) =>
+              setTransaction({ ...transaction, expenses: checked })
+            }
+            text={"Expenses"}
           />
         </div>
         <br />
