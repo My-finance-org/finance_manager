@@ -3,9 +3,11 @@
   flex-direction: column;
   background-color: #fff;
   max-width: 352px;
+  height: 276px;
   width: 100%;
   padding: 20px 24px;
   border-radius: 8px;
+
   .cardHeader {
     display: flex;
     align-items: center;
@@ -69,4 +71,8 @@
     justify-content: space-between;
     align-items: center;
   }
+}
+
+.goalsCardTitle {
+  margin-bottom: 10px;
 }
