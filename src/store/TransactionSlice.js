@@ -21,7 +21,7 @@ const transactionsSlice = createSlice({
   name: "transactions",
   initialState: {
     transactions: [],
-    loading: false,
+    loading: true,
     error: null,
   },
   reducers: {},

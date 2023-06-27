@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import authSlice from "./AuthSlice";
 import balancesSlice from "./BalancesSlice";
-import financeSlice from "./FinanceSlice";
+import billsSlice from "./BillsSlice";
 import goalsSlice from "./GoalsSlice";
 import settingsSlice from "./SettingsSlice";
 import transactionsSlice from "./TransactionSlice";
@@ -10,7 +10,7 @@ const store = configureStore({
   reducer: {
     auth: authSlice.reducer,
     balances: balancesSlice.reducer,
-    finance: financeSlice.reducer,
+    bills: billsSlice.reducer,
     goals: goalsSlice.reducer,
     settings: settingsSlice.reducer,
     transactions: transactionsSlice.reducer,
