@@ -5,11 +5,23 @@ import { Tab, TabContent, TabHeader, Tabs } from "@/components/Tabs";
 import RecentTransactionTable from "@/components/RecentTransactionTable";
 import LoginButton from "@/components/Buttons/LoginButton";
 import TransactionModal from "@/components/Modals/TransactionModal";
-import { transactions } from "@/constants/transaction";
 import "./Transactions.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { getTransaction } from "@/store/TransactionSlice";
+import SmallLoader from "@/components/SmallLoader";
 
 export const Transactions = () => {
+  const dispatch = useDispatch();
+  const { user } = useSelector(state => state.auth);
+  const { transactions, loading } = useSelector(state => state.transactions);
   const [isOpenModal, setIsOpenModal] = useState(false);
+
+  useEffect(() => {
+    if (user.id) {
+      dispatch(getTransaction(user.id));
+      console.log("transactions", transactions);
+    }
+  }, [user]);
 
   return (
     <MainLayout>
@@ -33,25 +45,38 @@ export const Transactions = () => {
           </TabHeader>
           <TabContent>
             <div className="table-wrapper">
-              <RecentTransactionTable transactions={transactions} />
+              {loading ? (
+                <SmallLoader />
+              ) : (
+                <RecentTransactionTable transactions={transactions} />
+              )}
+
               <LoginButton
                 text="Load More"
                 onClick={() => console.log("Load more firs tab")}
               />
             </div>
             <div className="table-wrapper">
-              <RecentTransactionTable
-                transactions={transactions.filter(t => t.revenue)}
-              />
+              {loading ? (
+                <SmallLoader />
+              ) : (
+                <RecentTransactionTable
+                  transactions={transactions.filter(t => t.revenue)}
+                />
+              )}
               <LoginButton
                 text="Load More"
                 onClick={() => console.log("Load more second tab")}
               />
             </div>
             <div className="table-wrapper">
-              <RecentTransactionTable
-                transactions={transactions.filter(t => t.expenses)}
-              />
+              {loading ? (
+                <SmallLoader />
+              ) : (
+                <RecentTransactionTable
+                  transactions={transactions.filter(t => t.expenses)}
+                />
+              )}
               <LoginButton
                 text="Load More"
                 onClick={() => console.log("Load more third tab")}

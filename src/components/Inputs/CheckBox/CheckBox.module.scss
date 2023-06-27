@@ -9,6 +9,10 @@
   background-color: #d0d5dd;
   transition: 0.2s;
   cursor: pointer;
+
+  p {
+    padding-left: 30px;
+  }
 }
 
 .checkBox:checked + .label {

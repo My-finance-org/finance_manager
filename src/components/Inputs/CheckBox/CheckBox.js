@@ -2,20 +2,22 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./CheckBox.module.scss";
 
-const CheckBox = ({ checked, onChange }) => {
+const CheckBox = ({ checked, onChange, text, id }) => {
   return (
     <>
       <input
-        id="checkbox"
+        id={id}
         type="checkbox"
         className={styles.checkBox}
         checked={checked}
         onChange={onChange}
       />
       <label
-        htmlFor="checkbox"
+        htmlFor={id}
         className={styles.label}
-      ></label>
+      >
+        <p>{text}</p>
+      </label>
     </>
   );
 };

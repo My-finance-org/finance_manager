@@ -13,7 +13,7 @@ const store = configureStore({
     finance: financeSlice.reducer,
     goals: goalsSlice.reducer,
     settings: settingsSlice.reducer,
-    transaction: transactionsSlice.reducer,
+    transactions: transactionsSlice.reducer,
   },
 });
 

@@ -20,12 +20,13 @@ const BillModal = ({ isOpen, onClose }) => {
     logo: "",
     title: "",
     description: "",
-    lastChange: "",
+    lastChange: new Date(),
     amount: "",
   });
 
   const createTransaction = e => {
     e.preventDefault();
+    e.stopPropagation();
     console.log("bill", bill);
   };
 
@@ -85,12 +86,11 @@ const BillModal = ({ isOpen, onClose }) => {
         </div>
         <div className="input-wrapper">
           <label htmlFor="">Last Change</label>
-          <TextInput
-            onChange={({ target: { value } }) => {
+          <DatePicker
+            onChange={value => {
               setBill({ ...bill, lastChange: value });
             }}
             value={bill.lastChange}
-            placeholder="Enter Last Change"
           />
         </div>
         <div className="input-wrapper">
