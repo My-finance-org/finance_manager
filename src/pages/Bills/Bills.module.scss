@@ -1,7 +1,7 @@
-.bills{
+.bills {
   &-title {
     margin-bottom: 18px;
-    color:#878787;
+    color: #878787;
     font-weight: 400;
     line-height: 32px;
     text-align: left;
@@ -9,100 +9,112 @@
   .tableWrapper {
     padding: 24px 32px 40px 32px;
     box-shadow: 0px 20px 25px 0px rgba(76, 103, 100, 0.1);
-    background:  #fff;
+    background: #fff;
     border-radius: 16px;
-    table{
-      .rightAlign{
+    table {
+      .rightAlign {
         text-align: right;
       }
-      th{
+      th {
         color: #191919;
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
         text-align: left;
       }
-        .lastChange{
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 24px;
-          text-align: left;
-          color: #9F9F9F;
-        }
-      .tableRow{
-        border-top: 1px solid #D2D2D240;
+      .lastChange {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: #9f9f9f;
       }
-      td{
+      .tableRow {
+        border-top: 1px solid #d2d2d240;
+      }
+      td {
         vertical-align: inherit;
-        .descriptionBlock{
+        .descriptionBlock {
           display: flex;
           flex-direction: column;
           width: 304px;
-          height:  98px;
+          height: 98px;
           gap: 8px;
         }
-        .descriptionTitle{
+        .descriptionTitle {
           font-size: 18px;
           font-weight: 800;
           line-height: 24px;
           text-align: left;
           color: #191919;
         }
-        .description{
+        .description {
           font-size: 14px;
           font-weight: 400;
           line-height: 22px;
           text-align: left;
-          color: #9F9F9F;
+          color: #9f9f9f;
         }
       }
-      .dateBlock{
-        width:  72px;
+      .dateBlock {
+        width: 72px;
         height: 82px;
         padding: 12px 8px 12px 8px;
         border-radius: 8px;
         gap: 8px;
         display: flex;
         flex-direction: column;
-        background: #D2D2D240;
+        background: #d2d2d240;
         align-items: center;
-        .textMonth{
+        .textMonth {
           font-size: 16px;
           font-weight: 600;
           line-height: 18px;
           text-align: center;
-          color:#878787 ;
+          color: #878787;
         }
-        .textDay{
+        .textDay {
           font-size: 22px;
           font-weight: 800;
           line-height: 32px;
           text-align: center;
           color: #525256;
         }
-        .image{
+        .image {
           max-width: 100%;
           max-height: 100%;
         }
-
       }
-        .amountBox{
-          width: 108px;
-          height: 48px;
-          padding: 12px 24px 12px 24px;
-          border-radius: 8px;
-          border: 1px solid #E8E8E8;
-          margin: 0 0 0 auto;
-          gap: 8px;
-        }
-      .amount{
+      .amountBox {
+        width: 108px;
+        height: 48px;
+        padding: 12px 24px 12px 24px;
+        border-radius: 8px;
+        border: 1px solid #e8e8e8;
+        margin: 0 0 0 auto;
+        gap: 8px;
+      }
+      .amount {
         font-size: 18px;
         font-weight: 800;
         line-height: 24px;
         text-align: center;
-        color:#191919;
+        color: #191919;
       }
-
     }
+  }
+
+  .modal-open {
+    height: 100%;
+    background-color: #299d91;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    margin-left: auto;
+    cursor: pointer;
   }
 }

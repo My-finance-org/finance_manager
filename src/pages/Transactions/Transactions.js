@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MainLayout } from "@/layouts/MainLayout/MainLayout";
 import BaseTitle from "@/components/shared/BaseTitle";
 import { Tab, TabContent, TabHeader, Tabs } from "@/components/Tabs";
 import RecentTransactionTable from "@/components/RecentTransactionTable";
-import { transactions } from "@/constants/transaction";
 import LoginButton from "@/components/Buttons/LoginButton";
+import TransactionModal from "@/components/Modals/TransactionModal";
+import { transactions } from "@/constants/transaction";
 import "./Transactions.scss";
 
 export const Transactions = () => {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
   return (
     <MainLayout>
       <div className="transactions">
@@ -21,6 +24,12 @@ export const Transactions = () => {
             <Tab>All</Tab>
             <Tab>Revenue</Tab>
             <Tab>Expenses</Tab>
+            <button
+              className="modal-open"
+              onClick={() => setIsOpenModal(true)}
+            >
+              Create Transaction
+            </button>
           </TabHeader>
           <TabContent>
             <div className="table-wrapper">
@@ -50,6 +59,10 @@ export const Transactions = () => {
             </div>
           </TabContent>
         </Tabs>
+        <TransactionModal
+          isOpen={isOpenModal}
+          onClose={() => setIsOpenModal(false)}
+        />
       </div>
     </MainLayout>
   );
