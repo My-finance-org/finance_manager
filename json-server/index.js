@@ -25,7 +25,6 @@ server.post("/api/login", (req, res) => {
     );
     const { users } = db;
 
-    // находим в бд пользователя с таким username и password
     let userFromBd = users.find(
       user => user.email === email && user.password === password
     );
@@ -59,7 +58,6 @@ server.post("/api/auth", (req, res) => {
     let userFromBd = users.find(user => user.id === userDecoded.id);
 
     if (userFromBd) {
-      console.log("userFromBd", userFromBd);
       return res.json(userFromBd);
     }
 
