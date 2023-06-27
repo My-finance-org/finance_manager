@@ -155,5 +155,37 @@
     }
   ],
   "finance": {},
-  "media": []
+  "media": [],
+  "bills": [
+    {
+      "date": "2023-06-27T21:00:00.000Z",
+      "logo": "logo",
+      "title": "title",
+      "description": "descr",
+      "lastChange": "2023-06-27T22:49:54.962Z",
+      "amount": "856",
+      "userId": "69e4c56b-b29a-457f-a0bb-c895dbc29d35",
+      "id": 1
+    },
+    {
+      "date": "2023-06-25T21:00:00.000Z",
+      "logo": "logo",
+      "title": "title2",
+      "description": "DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription",
+      "lastChange": "2023-06-27T22:58:17.263Z",
+      "amount": "234",
+      "userId": "69e4c56b-b29a-457f-a0bb-c895dbc29d35",
+      "id": 2
+    },
+    {
+      "date": "2023-06-18T21:00:00.000Z",
+      "logo": "logo",
+      "title": "Title 3",
+      "description": "DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription",
+      "lastChange": "2023-06-27T23:01:31.871Z",
+      "amount": "111",
+      "userId": "69e4c56b-b29a-457f-a0bb-c895dbc29d35",
+      "id": 3
+    }
+  ]
 }

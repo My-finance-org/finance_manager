@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Select from "react-select";
 import DatePicker from "react-date-picker";
 import TextInput from "@/components/Inputs/TextInput";
 import Modal from "../Modal";
 import BaseTitle from "@/components/shared/BaseTitle";
 import "./BillModal.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { createBills, getBills } from "@/store/BillsSlice";
 
 const options = [
   { value: "Credit Card", label: "Credit Card" },
@@ -15,9 +16,11 @@ const options = [
 ];
 
 const BillModal = ({ isOpen, onClose }) => {
+  const dispatch = useDispatch();
+  const { user } = useSelector(state => state.auth);
   const [bill, setBill] = useState({
     date: "",
-    logo: "",
+    logo: "logo",
     title: "",
     description: "",
     lastChange: new Date(),
@@ -26,8 +29,19 @@ const BillModal = ({ isOpen, onClose }) => {
 
   const createTransaction = e => {
     e.preventDefault();
-    e.stopPropagation();
     console.log("bill", bill);
+    const newBill = { ...bill, userId: user.id };
+    dispatch(createBills(newBill));
+    dispatch(getBills(user.id));
+    onClose();
+    setBill({
+      date: "",
+      logo: "logo",
+      title: "",
+      description: "",
+      lastChange: new Date(),
+      amount: "",
+    });
   };
 
   return (

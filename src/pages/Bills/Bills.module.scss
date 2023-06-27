@@ -11,6 +11,8 @@
     box-shadow: 0px 20px 25px 0px rgba(76, 103, 100, 0.1);
     background: #fff;
     border-radius: 16px;
+    position: relative;
+
     table {
       .rightAlign {
         text-align: right;
@@ -54,6 +56,7 @@
           line-height: 22px;
           text-align: left;
           color: #9f9f9f;
+          word-wrap: break-word;
         }
       }
       .dateBlock {
