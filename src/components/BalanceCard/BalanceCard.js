@@ -2,11 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./BalanceCard.scss";
 
-const BalanceCard = ({}) => {
+const BalanceCard = props => {
+  const {
+    bankName,
+    branchName,
+    accountType,
+    accountNumber,
+    balanceAmount,
+    id,
+    deleteBalance,
+  } = props;
   return (
     <div className="balance-card">
       <div className="header">
-        <div className="credit-card">Credit Card</div>
+        <div className="credit-card">{accountType}</div>
         <div className="type">
           <div className="frame-40714">
             <div className="master-card">Master Card</div>
@@ -24,18 +33,23 @@ const BalanceCard = ({}) => {
       <div className="content">
         <div className="account-details">
           <div className="account-number">
-            <div className="_133-456-886-8">3388 4556 8860 8***</div>
+            <div className="_133-456-886-8">{accountNumber}</div>
             <div className="account-number2">Account Number</div>
           </div>
           <div className="total-amount">
-            <div className="_25000">$25000</div>
+            <div className="_25000">${balanceAmount}</div>
             <div className="total-amount2">Total amount</div>
           </div>
         </div>
         <div className="footer">
-          <div className="remove">Remove</div>
+          <div
+            className="remove"
+            onClick={() => deleteBalance(id)}
+          >
+            Remove
+          </div>
           <Link
-            to={"/balances/1"}
+            to={`/balances/${id}`}
             className="button"
           >
             <div className="details">Details</div>
