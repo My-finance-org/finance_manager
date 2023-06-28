@@ -34,7 +34,6 @@ const TransactionModal = ({ isOpen, onClose }) => {
   const create = e => {
     e.preventDefault();
     const newTransaction = { ...transaction, id: uuidv4(), userId: user.id };
-    console.log("transaction", newTransaction);
     dispatch(createTransaction(newTransaction));
     dispatch(getTransaction(user.id));
     onClose();

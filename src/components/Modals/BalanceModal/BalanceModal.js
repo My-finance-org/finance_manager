@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Select from "react-select";
-import DatePicker from "react-date-picker";
+import { v4 as uuidv4 } from "uuid";
 import TextInput from "@/components/Inputs/TextInput";
 import Modal from "../Modal";
 import BaseTitle from "@/components/shared/BaseTitle";
+import { createBalance, getBalances } from "@/store/BalancesSlice";
 import "./BalanceModal.scss";
+import { useDispatch, useSelector } from "react-redux";
 
 const options = [
   { value: "Credit Card", label: "Credit Card" },
@@ -15,6 +17,8 @@ const options = [
 ];
 
 const BalanceModal = ({ isOpen, onClose }) => {
+  const dispatch = useDispatch();
+  const { user } = useSelector(state => state.auth);
   const [balance, setbalance] = useState({
     bankName: "",
     branchName: "",
@@ -23,9 +27,19 @@ const BalanceModal = ({ isOpen, onClose }) => {
     balanceAmount: "",
   });
 
-  const createTransaction = e => {
+  const create = e => {
     e.preventDefault();
-    console.log("balance", balance);
+    const newBalance = { ...balance, id: uuidv4(), userId: user.id };
+    dispatch(createBalance(newBalance));
+    dispatch(getBalances(user.id));
+    onClose();
+    setbalance({
+      bankName: "",
+      branchName: "",
+      accountType: "",
+      accountNumber: "",
+      balanceAmount: "",
+    });
   };
 
   return (
@@ -41,7 +55,7 @@ const BalanceModal = ({ isOpen, onClose }) => {
 
       <form
         className="transaction-modal__form"
-        onSubmit={createTransaction}
+        onSubmit={create}
       >
         <div className="input-wrapper">
           <label htmlFor="">Bank Name</label>
